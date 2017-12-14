@@ -47,7 +47,7 @@ global with sharing class BINGOController {
     
     private static final Integer totalsquares = 25;
     
-    private static final Integer querylimit = 10000;
+    private static final Integer querylimit = 999;
     
     /**
         The constructor for BingoController
