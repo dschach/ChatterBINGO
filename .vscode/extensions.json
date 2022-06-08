@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "chuckjonas.apex-pmd",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "financialforce.lana",
+    "peterweinberg.apexdox-vs-code",
+    "redhat.vscode-xml",
+    "salesforce.salesforcedx-vscode",
+    "eg2.vscode-npm-script",
+    "matteopieroni.refresh-npm-packages"
+  ]
+}

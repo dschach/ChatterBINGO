@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <classAccesses>
+        <apexClass>BINGOController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>BingoControllerTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <description>Allows the user to play ChatterBINGO - it does not give access to view users the current user would not otherwise be able to see.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>ChatterBINGO</label>
+    <pageAccesses>
+        <apexPage>BINGO</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <tabSettings>
+        <tab>BINGO</tab>
+        <visibility>Available</visibility>
+    </tabSettings>
+</PermissionSet>

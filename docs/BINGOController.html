@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Project code documentation</title>
+		<meta charset="UTF-8" />
+		<script type="module" src="./assets/index.js"></script>
+		<script type="module" src="./assets/search-idx.js"></script>
+		<script type="module" src="./assets/search.js"></script>
+		<script charset="UTF-8" src="./assets/highlight.js"></script>
+		<script charset="UTF-8" src="./assets/mark.js"></script>
+		<script charset="UTF-8" src="./assets/lunr.js"></script>
+		<link rel="stylesheet" href="./assets/highlight.css" />
+		<link rel="stylesheet" type="text/css" href="./assets/index.css" />
+		<link rel="shortcut icon" type="image/png" href="./assets/favicon.png" />
+	</head>
+
+	<body>
+		<div id="side-bar">
+			<div id="logo-container">
+				<div class="title">Project code documentation</div>
+				<img src="assets/logo.png" />
+				<div class="subtitle">Documentation for <a target="_blank" rel="noopener noreferrer" href="https://github.com/dschach/projectname">Chatter BINGO</a></div>
+			</div>
+			<div id="search-wrapper">
+				<div class="search-icon"></div>
+				<input id="search-input" type="text" autocomplete="off" placeholder="Search..." />
+			</div>
+			<ul id="search-results" class=""></ul>
+			<div class="navbar">
+				<nav role="navigation">
+					<a class="nav-header" id="home" href="javascript:void(0)" onclick="goToLocation('index.html');"> Home </a>
+					<details id="Miscellaneous" class="group-name">
+						<summary id="header-Miscellaneous" class="nav-header">
+							<span>Miscellaneous</span>
+						</summary>
+						<ul>
+							<!-- menu items -->
+							<li title="BINGOController" id="item-BINGOController" class="nav-item class global" onclick="goToLocation('BINGOController.html');">
+								<a tabindex="1" href="javascript:void(0)">BINGOController</a>
+							</li>
+							<li title="BingoControllerTest" id="item-BingoControllerTest" class="nav-item class private" onclick="goToLocation('BingoControllerTest.html');">
+								<a tabindex="1" href="javascript:void(0)">BingoControllerTest</a>
+							</li>
+						</ul>
+					</details>
+				</nav>
+			</div>
+		</div>
+		<table id="content">
+			<tr>
+				<td class="scoping-panel">
+					Show: <input type="checkbox" checked="true" id="cbx-all" onclick="toggleAllScopes(this.checked);" /> <label for="cbx-all">All</label>&nbsp;&nbsp;
+					<input type="checkbox" checked="true" id="cbx-global" onclick="toggleScope('global', this.checked);" />
+					<label for="cbx-global"> global </label>&nbsp;&nbsp;<input type="checkbox" checked="true" id="cbx-public" onclick="toggleScope('public', this.checked);" />
+					<label for="cbx-public"> public </label>&nbsp;&nbsp;<input type="checkbox" checked="true" id="cbx-protected" onclick="toggleScope('protected', this.checked);" />
+					<label for="cbx-protected"> protected </label>&nbsp;&nbsp;<input type="checkbox" checked="true" id="cbx-private" onclick="toggleScope('private', this.checked);" />
+					<label for="cbx-private"> private </label>&nbsp;&nbsp;<input type="checkbox" checked="true" id="cbx-webservice" onclick="toggleScope('webservice', this.checked);" />
+					<label for="cbx-webservice"> webService </label>&nbsp;&nbsp;<input
+						type="checkbox"
+						checked="true"
+						id="cbx-testmethod"
+						onclick="toggleScope('testmethod', this.checked);" />
+					<label for="cbx-testmethod"> testMethod </label>
+				</td>
+			</tr>
+			<tr>
+				<td class="doc-page">
+					<div class="section">
+						<h2 class="class-title top-level-type" id="BINGOController">
+							<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L13"> BINGOController </a>
+						</h2>
+						<div class="class-container">
+							<div class="class-description">BingoController controls the BINGO page and both BINGO components.</div>
+							<div class="class-subtitle">Signature</div>
+
+							<div class="class-signature">global with sharing class BINGOController</div>
+							<br />David Schach Dev Team Chris Shackelford Brad Gross @version 2.1 2011-02-18
+						</div>
+						<div class="subsection properties BINGOController">
+							<h3 class="subsection-title properties">BINGOController Properties</h3>
+							<table class="attributes-table properties">
+								<tr>
+									<th>Name</th>
+									<th>Signature</th>
+								</tr>
+								<tr class="property private">
+									<td class="attribute-name">
+										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L16"> allusers </a>
+									</td>
+									<td>
+										<div class="attribute-signature">private List&lt;User&gt; allusers</div>
+									</td>
+								</tr>
+								<tr class="property public">
+									<td class="attribute-name">
+										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L15"> bingos </a>
+									</td>
+									<td>
+										<div class="attribute-signature">public List&lt;User&gt; bingos</div>
+									</td>
+								</tr>
+								<tr class="property public">
+									<td class="attribute-name">
+										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L18"> me </a>
+									</td>
+									<td>
+										<div class="attribute-signature">public User me</div>
+									</td>
+								</tr>
+								<tr class="property private">
+									<td class="attribute-name">
+										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L14"> myid </a>
+									</td>
+									<td>
+										<div class="attribute-signature">private Id myid</div>
+									</td>
+								</tr>
+								<tr class="property private">
+									<td class="attribute-name">
+										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L49"> QUERY_LIMIT </a>
+									</td>
+									<td>
+										<div class="attribute-signature">private static final Integer QUERY_LIMIT</div>
+									</td>
+								</tr>
+								<tr class="property private">
+									<td class="attribute-name">
+										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L47"> TOTAL_SQUARES </a>
+									</td>
+									<td>
+										<div class="attribute-signature">private static final Integer TOTAL_SQUARES</div>
+									</td>
+								</tr>
+								<tr class="property public">
+									<td class="attribute-name">
+										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L19"> user1 </a>
+									</td>
+									<td>
+										<div class="attribute-signature">public User user1</div>
+									</td>
+								</tr>
+								<tr class="property public">
+									<td class="attribute-name">
+										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L28"> user10 </a>
+									</td>
+									<td>
+										<div class="attribute-signature">public User user10</div>
+									</td>
+								</tr>
+								<tr class="property public">
+									<td class="attribute-name">
+										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L29"> user11 </a>
+									</td>
+									<td>
+										<div class="attribute-signature">public User user11</div>
+									</td>
+								</tr>
+								<tr class="property public">
+									<td class="attribute-name">
+										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L30"> user12 </a>
+									</td>
+									<td>
+										<div class="attribute-signature">public User user12</div>
+									</td>
+								</tr>
+								<tr class="property public">
+									<td class="attribute-name">
+										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L31"> user13 </a>
+									</td>
+									<td>
+										<div class="attribute-signature">public User user13</div>
+									</td>
+								</tr>
+								<tr class="property public">
+									<td class="attribute-name">
+										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L32"> user14 </a>
+									</td>
+									<td>
+										<div class="attribute-signature">public User user14</div>
+									</td>
+								</tr>
+								<tr class="property public">
+									<td class="attribute-name">
+										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L33"> user15 </a>
+									</td>
+									<td>
+										<div class="attribute-signature">public User user15</div>
+									</td>
+								</tr>
+								<tr class="property public">
+									<td class="attribute-name">
+										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L34"> user16 </a>
+									</td>
+									<td>
+										<div class="attribute-signature">public User user16</div>
+									</td>
+								</tr>
+								<tr class="property public">
+									<td class="attribute-name">
+										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L35"> user17 </a>
+									</td>
+									<td>
+										<div class="attribute-signature">public User user17</div>
+									</td>
+								</tr>
+								<tr class="property public">
+									<td class="attribute-name">
+										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L36"> user18 </a>
+									</td>
+									<td>
+										<div class="attribute-signature">public User user18</div>
+									</td>
+								</tr>
+								<tr class="property public">
+									<td class="attribute-name">
+										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L37"> user19 </a>
+									</td>
+									<td>
+										<div class="attribute-signature">public User user19</div>
+									</td>
+								</tr>
+								<tr class="property public">
+									<td class="attribute-name">
+										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L20"> user2 </a>
+									</td>
+									<td>
+										<div class="attribute-signature">public User user2</div>
+									</td>
+								</tr>
+								<tr class="property public">
+									<td class="attribute-name">
+										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L38"> user20 </a>
+									</td>
+									<td>
+										<div class="attribute-signature">public User user20</div>
+									</td>
+								</tr>
+								<tr class="property public">
+									<td class="attribute-name">
+										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L39"> user21 </a>
+									</td>
+									<td>
+										<div class="attribute-signature">public User user21</div>
+									</td>
+								</tr>
+								<tr class="property public">
+									<td class="attribute-name">
+										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L40"> user22 </a>
+									</td>
+									<td>
+										<div class="attribute-signature">public User user22</div>
+									</td>
+								</tr>
+								<tr class="property public">
+									<td class="attribute-name">
+										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L41"> user23 </a>
+									</td>
+									<td>
+										<div class="attribute-signature">public User user23</div>
+									</td>
+								</tr>
+								<tr class="property public">
+									<td class="attribute-name">
+										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L42"> user24 </a>
+									</td>
+									<td>
+										<div class="attribute-signature">public User user24</div>
+									</td>
+								</tr>
+								<tr class="property public">
+									<td class="attribute-name">
+										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L43"> user25 </a>
+									</td>
+									<td>
+										<div class="attribute-signature">public User user25</div>
+									</td>
+								</tr>
+								<tr class="property public">
+									<td class="attribute-name">
+										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L21"> user3 </a>
+									</td>
+									<td>
+										<div class="attribute-signature">public User user3</div>
+									</td>
+								</tr>
+								<tr class="property public">
+									<td class="attribute-name">
+										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L22"> user4 </a>
+									</td>
+									<td>
+										<div class="attribute-signature">public User user4</div>
+									</td>
+								</tr>
+								<tr class="property public">
+									<td class="attribute-name">
+										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L23"> user5 </a>
+									</td>
+									<td>
+										<div class="attribute-signature">public User user5</div>
+									</td>
+								</tr>
+								<tr class="property public">
+									<td class="attribute-name">
+										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L24"> user6 </a>
+									</td>
+									<td>
+										<div class="attribute-signature">public User user6</div>
+									</td>
+								</tr>
+								<tr class="property public">
+									<td class="attribute-name">
+										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L25"> user7 </a>
+									</td>
+									<td>
+										<div class="attribute-signature">public User user7</div>
+									</td>
+								</tr>
+								<tr class="property public">
+									<td class="attribute-name">
+										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L26"> user8 </a>
+									</td>
+									<td>
+										<div class="attribute-signature">public User user8</div>
+									</td>
+								</tr>
+								<tr class="property public">
+									<td class="attribute-name">
+										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L27"> user9 </a>
+									</td>
+									<td>
+										<div class="attribute-signature">public User user9</div>
+									</td>
+								</tr>
+								<tr class="property private">
+									<td class="attribute-name">
+										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L17"> userids </a>
+									</td>
+									<td>
+										<div class="attribute-signature">private Set&lt;Id&gt; userids</div>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<div class="subsection methods">
+							<h3 class="subsection-title methods">BINGOController Constructors</h3>
+							<div class="methods-container">
+								<ul class="methods-toc">
+									<li class="method public">
+										<a class="methods-toc__entry" href="#BINGOController.BingoController"> BingoController () </a>
+
+										<div class="methods-toc__description">The constructor for BingoController</div>
+									</li>
+								</ul>
+								<div class="method public">
+									<h4 class="method-title" id="BINGOController.BingoController">
+										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L55"> BingoController() </a>
+									</h4>
+									<div class="method-description">The constructor for BingoController</div>
+									<div class="method-subtitle">Signature</div>
+
+									<div class="method-signature">public BingoController()</div>
+								</div>
+							</div>
+						</div>
+						<div class="subsection methods">
+							<h3 class="subsection-title methods">BINGOController Methods</h3>
+							<div class="methods-container">
+								<ul class="methods-toc">
+									<li class="method public">
+										<a class="methods-toc__entry" href="#BINGOController.getChooseRender"> getChooseRender () </a>
+
+										<div class="methods-toc__description">Method getChooseRender</div>
+									</li>
+									<li class="method public">
+										<a class="methods-toc__entry" href="#BINGOController.newCard"> newCard () </a>
+
+										<div class="methods-toc__description">
+											Method NewCard navigates to the same Visualforce page, but flushes the cache and performs a GET. It does NOT place any &#39;p&#39; parameter in the URL, so
+											the new page renders as html. This effectively reshuffles the BINGO card.
+										</div>
+									</li>
+									<li class="method public">
+										<a class="methods-toc__entry" href="#BINGOController.showAsPDF"> showAsPDF () </a>
+
+										<div class="methods-toc__description">
+											Method showAsPDF navigates to the same Visualforce page, but flushes the cache and performs a GET. It also places the &#39;p&#39; parameter in the URL, so
+											ChooseRender returns &#39;pdf&#39; to the page RenderAs attribute. Note: This also reshuffles the BINGO card, so this does NOT merely display the current
+											BINGO card as a pdf.
+										</div>
+									</li>
+								</ul>
+								<div class="method public">
+									<h4 class="method-title" id="BINGOController.getChooseRender">
+										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L200">
+											getChooseRender()
+										</a>
+									</h4>
+									<div class="method-description">Method getChooseRender</div>
+									<div class="method-subtitle">Signature</div>
+
+									<div class="method-signature">public String getChooseRender()</div>
+									<div class="method-subtitle">Returns</div>
+									<div class="method-subtitle-description">String</div>
+								</div>
+								<div class="method public">
+									<h4 class="method-title" id="BINGOController.newCard">
+										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L233"> newCard() </a>
+									</h4>
+									<div class="method-description">
+										Method NewCard navigates to the same Visualforce page, but flushes the cache and performs a GET. It does NOT place any &#39;p&#39; parameter in the URL, so the
+										new page renders as html. This effectively reshuffles the BINGO card.
+									</div>
+									<div class="method-subtitle">Signature</div>
+
+									<div class="method-signature">public PageReference newCard()</div>
+									<div class="method-subtitle">Returns</div>
+									<div class="method-subtitle-description">PageReference</div>
+								</div>
+								<div class="method public">
+									<h4 class="method-title" id="BINGOController.showAsPDF">
+										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L218"> showAsPDF() </a>
+									</h4>
+									<div class="method-description">
+										Method showAsPDF navigates to the same Visualforce page, but flushes the cache and performs a GET. It also places the &#39;p&#39; parameter in the URL, so
+										ChooseRender returns &#39;pdf&#39; to the page RenderAs attribute. Note: This also reshuffles the BINGO card, so this does NOT merely display the current BINGO
+										card as a pdf.
+									</div>
+									<div class="method-subtitle">Signature</div>
+
+									<div class="method-signature">public PageReference showAsPDF()</div>
+									<div class="method-subtitle">Returns</div>
+									<div class="method-subtitle-description">PageReference</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td class="footer">
+					<div>
+						<a href="https://github.com/no-stack-dub-sack/apexdox-vs-code" target="_blank" rel="noopener noreferrer"> Powered By ApexDox VS Code </a>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>
