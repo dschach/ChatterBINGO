@@ -1,9 +1,17 @@
+/**
+ * Test code for ChatterBINGO
+ *
+ * @author Chris Shackelford
+ * @author David Schach
+ * @author Brad Gross
+ * @since 2.1 2011-02-18
+ * @group BINGO
+ */
 @isTest
 private class BingoControllerTest {
 	/**
-	    TestMethod - inserts 30 users, has them each follow the running User,
-	    and renders the BINGO card.
-	*/
+	 * TestMethod - inserts 30 users, has them each follow the running User, and renders the BINGO card.
+	 */
 	@isTest
 	private static void testBINGO30() {
 		List<User> users = new List<User>();
@@ -36,13 +44,12 @@ private class BingoControllerTest {
 	}
 
 	/**
-	    TestMethod - inserts 2 users, has them each follow the running User,
-	    and renders the BINGO card.
-	    It also has the running User follow each of the 2 inserted users.
-	    This is because the BINGO card draws from a User's followers and
-	    from those users who follow the User.
-	*/
-
+	 * TestMethod - inserts 2 users, has them each follow the running User,
+	 * and renders the BINGO card.
+	 * It also has the running User follow each of the 2 inserted users.
+	 * This is because the BINGO card draws from a User's followers and
+	 * from those users who follow the User.
+	 */
 	@isTest
 	private static void testBINGO2() {
 		List<User> users = new List<User>();
@@ -103,9 +110,9 @@ private class BingoControllerTest {
 	}
 
 	/**
-	    TestMethod - inserts 0 users, has them each follow the running User,
-	    and renders the BINGO card as a PDF.
-	*/
+	 * TestMethod - inserts 0 users, has them each follow the running User,
+	 * and renders the BINGO card as a PDF.
+	 */
 	@isTest
 	private static void testShowAsPDF() {
 		Test.startTest();
@@ -119,10 +126,9 @@ private class BingoControllerTest {
 	public static Profile theProfile;
 
 	/**
-	    Helper method to find a ModifyAllData User profile for each of the test users we create.
-	    @return Profile
-	*/
-
+	 *  Helper method to find a ModifyAllData User profile for each of the test users we create.
+	 * @return Profile
+	 */
 	public static Profile getSuperProfile() {
 		if (theProfile == null) {
 			for (Profile p : [SELECT Id, PermissionsModifyAllData, Name FROM Profile LIMIT 100]) {
@@ -142,7 +148,7 @@ private class BingoControllerTest {
 	 * Creates a new User
 	 * @author David Schach
 	 * @param  p User Profile
-	 * @return   Created User testUser
+	 * @return `User` Created User testUser
 	 */
 	public static User createTestUser(Profile p) {
 		//USER U = [ SELECT ID FROM USER WHERE ID = :USERINFO.GETUSERID()];
@@ -167,7 +173,7 @@ private class BingoControllerTest {
 	}
 	/**
 	 * Random words are required for testing as you will likely run into any word I can insert during a test class and produce false test results.
-	 * @return   random word
+	 * @return `String` random word
 	 */
 	public static String createRandomWord() {
 		String ret = 'schach' + math.rint(math.random() * 100000);

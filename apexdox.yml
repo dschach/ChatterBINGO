@@ -1,12 +1,12 @@
 engine:
   source:
     - path: '${workspaceFolder}/force-app/main/default/classes'
-      sourceUrl: https://fixthis.com
+      sourceUrl: https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes
     #- path: '${workspaceFolder}/force-app/main/default/tests'
     #  sourceUrl: https://fixthis.com
   targetDirectory: '${workspaceFolder}/docs'
   title: Chatter BINGO code documentation
-  subtitle: Documentation for <a target="_blank" rel="noopener noreferrer" href="https://github.com/dschach/projectname">Chatter BINGO</a>
+  subtitle: Documentation for <a target="_blank" rel="noopener noreferrer" href="https://github.com/dschach/ChatterBINGO">Chatter BINGO</a>
   sortOrder: alpha
   cleanDir: true
   showTOCSnippets: true
@@ -25,6 +25,8 @@ engine:
     - '${workspaceFolder}/doc-assets/favicon.png'
     - '${workspaceFolder}/doc-assets/icon.png'
     - '${workspaceFolder}/doc-assets/index.css'
+    - '${workspaceFolder}/doc-assets/index.js'
+    - '${workspaceFolder}/doc-assets/highlight.js'
     - '${workspaceFolder}/doc-assets/highlight.css'
     - '${workspaceFolder}/README.md'
   port: 8088

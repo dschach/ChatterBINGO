@@ -21,3 +21,7 @@ data/
 # Exclude project config
 sfdx-project.json
 dependencies.json
+
+# ApexDox
+docs/assets/highlight.js
+doc-assets/highlight.js

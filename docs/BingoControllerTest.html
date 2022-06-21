@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Project code documentation</title>
+		<title>Chatter BINGO code documentation</title>
 		<meta charset="UTF-8" />
 		<script type="module" src="./assets/index.js"></script>
 		<script type="module" src="./assets/search-idx.js"></script>
@@ -17,9 +17,9 @@
 	<body>
 		<div id="side-bar">
 			<div id="logo-container">
-				<div class="title">Project code documentation</div>
+				<div class="title">Chatter BINGO code documentation</div>
 				<img src="assets/logo.png" />
-				<div class="subtitle">Documentation for <a target="_blank" rel="noopener noreferrer" href="https://github.com/dschach/projectname">Chatter BINGO</a></div>
+				<div class="subtitle">Documentation for <a target="_blank" rel="noopener noreferrer" href="https://github.com/dschach/ChatterBINGO">Chatter BINGO</a></div>
 			</div>
 			<div id="search-wrapper">
 				<div class="search-icon"></div>
@@ -29,16 +29,16 @@
 			<div class="navbar">
 				<nav role="navigation">
 					<a class="nav-header" id="home" href="javascript:void(0)" onclick="goToLocation('index.html');"> Home </a>
-					<details id="Miscellaneous" class="group-name">
-						<summary id="header-Miscellaneous" class="nav-header">
-							<span>Miscellaneous</span>
+					<details id="BINGO" class="group-name">
+						<summary id="header-BINGO" class="nav-header">
+							<span>BINGO</span>
 						</summary>
 						<ul>
 							<!-- menu items -->
-							<li title="BINGOController" id="item-BINGOController" class="nav-item class global" onclick="goToLocation('BINGOController.html');">
+							<li title="BINGOController" id="item-BINGOController" class="nav-item class" onclick="goToLocation('BINGOController.html');">
 								<a tabindex="1" href="javascript:void(0)">BINGOController</a>
 							</li>
-							<li title="BingoControllerTest" id="item-BingoControllerTest" class="nav-item class private" onclick="goToLocation('BingoControllerTest.html');">
+							<li title="BingoControllerTest" id="item-BingoControllerTest" class="nav-item class" onclick="goToLocation('BingoControllerTest.html');">
 								<a tabindex="1" href="javascript:void(0)">BingoControllerTest</a>
 							</li>
 						</ul>
@@ -67,12 +67,21 @@
 				<td class="doc-page">
 					<div class="section">
 						<h2 class="class-title top-level-type" id="BingoControllerTest">
-							<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BingoControllerTest.cls#L2"> BingoControllerTest </a>
+							<a
+								target="_blank"
+								rel="noopener noreferrer"
+								title="Go to source"
+								class="source-link"
+								href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BingoControllerTest.cls#L11">
+								BingoControllerTest
+							</a>
 						</h2>
 						<div class="class-container">
+							<div class="class-description">Test code for ChatterBINGO</div>
 							<div class="class-subtitle">Signature</div>
 							<div class="class-annotations">@isTest</div>
 							<div class="class-signature">private class BingoControllerTest</div>
+							<br />Chris Shackelford David Schach Brad Gross<br />2.1 2011-02-18
 						</div>
 						<div class="subsection properties BingoControllerTest">
 							<h3 class="subsection-title properties">BingoControllerTest Properties</h3>
@@ -81,9 +90,16 @@
 									<th>Name</th>
 									<th>Signature</th>
 								</tr>
-								<tr class="property public">
+								<tr class="property">
 									<td class="attribute-name">
-										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BingoControllerTest.cls#L119"> theProfile </a>
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BingoControllerTest.cls#L126">
+											theProfile
+										</a>
 									</td>
 									<td>
 										<div class="attribute-signature">public static Profile theProfile</div>
@@ -141,7 +157,12 @@
 								</ul>
 								<div class="method public">
 									<h4 class="method-title" id="BingoControllerTest.createRandomWord">
-										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BingoControllerTest.cls#L172">
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BingoControllerTest.cls#L178">
 											createRandomWord()
 										</a>
 									</h4>
@@ -152,11 +173,16 @@
 
 									<div class="method-signature">public static String createRandomWord()</div>
 									<div class="method-subtitle">Returns</div>
-									<div class="method-subtitle-description">random word</div>
+									<div class="method-subtitle-description"><code class="code-inline">String</code> random word</div>
 								</div>
 								<div class="method public">
 									<h4 class="method-title" id="BingoControllerTest.createTestUser">
-										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BingoControllerTest.cls#L147">
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BingoControllerTest.cls#L153">
 											createTestUser(p)
 										</a>
 									</h4>
@@ -169,13 +195,18 @@
 									<div class="param-type">Type: <code class="code-inline">Profile</code></div>
 									<div class="param-description">User Profile</div>
 									<div class="method-subtitle">Returns</div>
-									<div class="method-subtitle-description">Created User testUser</div>
+									<div class="method-subtitle-description"><code class="code-inline">User</code> Created User testUser</div>
 									<div class="method-subtitle">Author</div>
 									<div class="method-subtitle-description">David Schach</div>
 								</div>
 								<div class="method public">
 									<h4 class="method-title" id="BingoControllerTest.getSuperProfile">
-										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BingoControllerTest.cls#L126">
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BingoControllerTest.cls#L132">
 											getSuperProfile()
 										</a>
 									</h4>
@@ -188,7 +219,14 @@
 								</div>
 								<div class="method testmethod">
 									<h4 class="method-title" id="BingoControllerTest.testBINGO0">
-										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BingoControllerTest.cls#L91"> testBINGO0() </a>
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BingoControllerTest.cls#L98">
+											testBINGO0()
+										</a>
 									</h4>
 									<div class="method-description">
 										TestMethod - inserts 0 users, has them each follow the running User, and renders the BINGO card. This method also verifies that the card is first shown as a
@@ -202,7 +240,14 @@
 								</div>
 								<div class="method testmethod">
 									<h4 class="method-title" id="BingoControllerTest.testBINGO2">
-										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BingoControllerTest.cls#L47"> testBINGO2() </a>
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BingoControllerTest.cls#L54">
+											testBINGO2()
+										</a>
 									</h4>
 									<div class="method-description">
 										TestMethod - inserts 2 users, has them each follow the running User, and renders the BINGO card. It also has the running User follow each of the 2 inserted
@@ -214,7 +259,14 @@
 								</div>
 								<div class="method testmethod">
 									<h4 class="method-title" id="BingoControllerTest.testBINGO30">
-										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BingoControllerTest.cls#L8"> testBINGO30() </a>
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BingoControllerTest.cls#L16">
+											testBINGO30()
+										</a>
 									</h4>
 									<div class="method-description">TestMethod - inserts 30 users, has them each follow the running User, and renders the BINGO card.</div>
 									<div class="method-subtitle">Signature</div>
@@ -223,7 +275,12 @@
 								</div>
 								<div class="method testmethod">
 									<h4 class="method-title" id="BingoControllerTest.testShowAsPDF">
-										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BingoControllerTest.cls#L110">
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BingoControllerTest.cls#L117">
 											testShowAsPDF()
 										</a>
 									</h4>

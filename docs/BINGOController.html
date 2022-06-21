@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Project code documentation</title>
+		<title>Chatter BINGO code documentation</title>
 		<meta charset="UTF-8" />
 		<script type="module" src="./assets/index.js"></script>
 		<script type="module" src="./assets/search-idx.js"></script>
@@ -17,9 +17,9 @@
 	<body>
 		<div id="side-bar">
 			<div id="logo-container">
-				<div class="title">Project code documentation</div>
+				<div class="title">Chatter BINGO code documentation</div>
 				<img src="assets/logo.png" />
-				<div class="subtitle">Documentation for <a target="_blank" rel="noopener noreferrer" href="https://github.com/dschach/projectname">Chatter BINGO</a></div>
+				<div class="subtitle">Documentation for <a target="_blank" rel="noopener noreferrer" href="https://github.com/dschach/ChatterBINGO">Chatter BINGO</a></div>
 			</div>
 			<div id="search-wrapper">
 				<div class="search-icon"></div>
@@ -29,16 +29,16 @@
 			<div class="navbar">
 				<nav role="navigation">
 					<a class="nav-header" id="home" href="javascript:void(0)" onclick="goToLocation('index.html');"> Home </a>
-					<details id="Miscellaneous" class="group-name">
-						<summary id="header-Miscellaneous" class="nav-header">
-							<span>Miscellaneous</span>
+					<details id="BINGO" class="group-name">
+						<summary id="header-BINGO" class="nav-header">
+							<span>BINGO</span>
 						</summary>
 						<ul>
 							<!-- menu items -->
-							<li title="BINGOController" id="item-BINGOController" class="nav-item class global" onclick="goToLocation('BINGOController.html');">
+							<li title="BINGOController" id="item-BINGOController" class="nav-item class" onclick="goToLocation('BINGOController.html');">
 								<a tabindex="1" href="javascript:void(0)">BINGOController</a>
 							</li>
-							<li title="BingoControllerTest" id="item-BingoControllerTest" class="nav-item class private" onclick="goToLocation('BingoControllerTest.html');">
+							<li title="BingoControllerTest" id="item-BingoControllerTest" class="nav-item class" onclick="goToLocation('BingoControllerTest.html');">
 								<a tabindex="1" href="javascript:void(0)">BingoControllerTest</a>
 							</li>
 						</ul>
@@ -67,14 +67,21 @@
 				<td class="doc-page">
 					<div class="section">
 						<h2 class="class-title top-level-type" id="BINGOController">
-							<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L13"> BINGOController </a>
+							<a
+								target="_blank"
+								rel="noopener noreferrer"
+								title="Go to source"
+								class="source-link"
+								href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L10">
+								BINGOController
+							</a>
 						</h2>
 						<div class="class-container">
 							<div class="class-description">BingoController controls the BINGO page and both BINGO components.</div>
 							<div class="class-subtitle">Signature</div>
 
 							<div class="class-signature">global with sharing class BINGOController</div>
-							<br />David Schach Dev Team Chris Shackelford Brad Gross @version 2.1 2011-02-18
+							<br />Chris Shackelford David Schach Brad Gross<br />2.1 2011-02-18
 						</div>
 						<div class="subsection properties BINGOController">
 							<h3 class="subsection-title properties">BINGOController Properties</h3>
@@ -83,257 +90,481 @@
 									<th>Name</th>
 									<th>Signature</th>
 								</tr>
-								<tr class="property private">
+								<tr class="property">
 									<td class="attribute-name">
-										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L16"> allusers </a>
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L13">
+											allusers
+										</a>
 									</td>
 									<td>
 										<div class="attribute-signature">private List&lt;User&gt; allusers</div>
 									</td>
 								</tr>
-								<tr class="property public">
+								<tr class="property">
 									<td class="attribute-name">
-										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L15"> bingos </a>
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L12">
+											bingos
+										</a>
 									</td>
 									<td>
 										<div class="attribute-signature">public List&lt;User&gt; bingos</div>
 									</td>
 								</tr>
-								<tr class="property public">
+								<tr class="property">
 									<td class="attribute-name">
-										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L18"> me </a>
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L15">
+											me
+										</a>
 									</td>
 									<td>
 										<div class="attribute-signature">public User me</div>
 									</td>
 								</tr>
-								<tr class="property private">
+								<tr class="property">
 									<td class="attribute-name">
-										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L14"> myid </a>
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L11">
+											myid
+										</a>
 									</td>
 									<td>
 										<div class="attribute-signature">private Id myid</div>
 									</td>
 								</tr>
-								<tr class="property private">
+								<tr class="property">
 									<td class="attribute-name">
-										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L49"> QUERY_LIMIT </a>
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L46">
+											QUERY_LIMIT
+										</a>
 									</td>
 									<td>
 										<div class="attribute-signature">private static final Integer QUERY_LIMIT</div>
 									</td>
 								</tr>
-								<tr class="property private">
+								<tr class="property">
 									<td class="attribute-name">
-										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L47"> TOTAL_SQUARES </a>
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L44">
+											TOTAL_SQUARES
+										</a>
 									</td>
 									<td>
 										<div class="attribute-signature">private static final Integer TOTAL_SQUARES</div>
 									</td>
 								</tr>
-								<tr class="property public">
+								<tr class="property">
 									<td class="attribute-name">
-										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L19"> user1 </a>
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L16">
+											user1
+										</a>
 									</td>
 									<td>
 										<div class="attribute-signature">public User user1</div>
 									</td>
 								</tr>
-								<tr class="property public">
+								<tr class="property">
 									<td class="attribute-name">
-										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L28"> user10 </a>
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L25">
+											user10
+										</a>
 									</td>
 									<td>
 										<div class="attribute-signature">public User user10</div>
 									</td>
 								</tr>
-								<tr class="property public">
+								<tr class="property">
 									<td class="attribute-name">
-										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L29"> user11 </a>
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L26">
+											user11
+										</a>
 									</td>
 									<td>
 										<div class="attribute-signature">public User user11</div>
 									</td>
 								</tr>
-								<tr class="property public">
+								<tr class="property">
 									<td class="attribute-name">
-										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L30"> user12 </a>
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L27">
+											user12
+										</a>
 									</td>
 									<td>
 										<div class="attribute-signature">public User user12</div>
 									</td>
 								</tr>
-								<tr class="property public">
+								<tr class="property">
 									<td class="attribute-name">
-										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L31"> user13 </a>
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L28">
+											user13
+										</a>
 									</td>
 									<td>
 										<div class="attribute-signature">public User user13</div>
 									</td>
 								</tr>
-								<tr class="property public">
+								<tr class="property">
 									<td class="attribute-name">
-										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L32"> user14 </a>
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L29">
+											user14
+										</a>
 									</td>
 									<td>
 										<div class="attribute-signature">public User user14</div>
 									</td>
 								</tr>
-								<tr class="property public">
+								<tr class="property">
 									<td class="attribute-name">
-										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L33"> user15 </a>
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L30">
+											user15
+										</a>
 									</td>
 									<td>
 										<div class="attribute-signature">public User user15</div>
 									</td>
 								</tr>
-								<tr class="property public">
+								<tr class="property">
 									<td class="attribute-name">
-										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L34"> user16 </a>
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L31">
+											user16
+										</a>
 									</td>
 									<td>
 										<div class="attribute-signature">public User user16</div>
 									</td>
 								</tr>
-								<tr class="property public">
+								<tr class="property">
 									<td class="attribute-name">
-										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L35"> user17 </a>
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L32">
+											user17
+										</a>
 									</td>
 									<td>
 										<div class="attribute-signature">public User user17</div>
 									</td>
 								</tr>
-								<tr class="property public">
+								<tr class="property">
 									<td class="attribute-name">
-										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L36"> user18 </a>
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L33">
+											user18
+										</a>
 									</td>
 									<td>
 										<div class="attribute-signature">public User user18</div>
 									</td>
 								</tr>
-								<tr class="property public">
+								<tr class="property">
 									<td class="attribute-name">
-										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L37"> user19 </a>
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L34">
+											user19
+										</a>
 									</td>
 									<td>
 										<div class="attribute-signature">public User user19</div>
 									</td>
 								</tr>
-								<tr class="property public">
+								<tr class="property">
 									<td class="attribute-name">
-										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L20"> user2 </a>
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L17">
+											user2
+										</a>
 									</td>
 									<td>
 										<div class="attribute-signature">public User user2</div>
 									</td>
 								</tr>
-								<tr class="property public">
+								<tr class="property">
 									<td class="attribute-name">
-										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L38"> user20 </a>
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L35">
+											user20
+										</a>
 									</td>
 									<td>
 										<div class="attribute-signature">public User user20</div>
 									</td>
 								</tr>
-								<tr class="property public">
+								<tr class="property">
 									<td class="attribute-name">
-										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L39"> user21 </a>
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L36">
+											user21
+										</a>
 									</td>
 									<td>
 										<div class="attribute-signature">public User user21</div>
 									</td>
 								</tr>
-								<tr class="property public">
+								<tr class="property">
 									<td class="attribute-name">
-										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L40"> user22 </a>
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L37">
+											user22
+										</a>
 									</td>
 									<td>
 										<div class="attribute-signature">public User user22</div>
 									</td>
 								</tr>
-								<tr class="property public">
+								<tr class="property">
 									<td class="attribute-name">
-										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L41"> user23 </a>
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L38">
+											user23
+										</a>
 									</td>
 									<td>
 										<div class="attribute-signature">public User user23</div>
 									</td>
 								</tr>
-								<tr class="property public">
+								<tr class="property">
 									<td class="attribute-name">
-										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L42"> user24 </a>
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L39">
+											user24
+										</a>
 									</td>
 									<td>
 										<div class="attribute-signature">public User user24</div>
 									</td>
 								</tr>
-								<tr class="property public">
+								<tr class="property">
 									<td class="attribute-name">
-										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L43"> user25 </a>
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L40">
+											user25
+										</a>
 									</td>
 									<td>
 										<div class="attribute-signature">public User user25</div>
 									</td>
 								</tr>
-								<tr class="property public">
+								<tr class="property">
 									<td class="attribute-name">
-										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L21"> user3 </a>
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L18">
+											user3
+										</a>
 									</td>
 									<td>
 										<div class="attribute-signature">public User user3</div>
 									</td>
 								</tr>
-								<tr class="property public">
+								<tr class="property">
 									<td class="attribute-name">
-										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L22"> user4 </a>
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L19">
+											user4
+										</a>
 									</td>
 									<td>
 										<div class="attribute-signature">public User user4</div>
 									</td>
 								</tr>
-								<tr class="property public">
+								<tr class="property">
 									<td class="attribute-name">
-										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L23"> user5 </a>
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L20">
+											user5
+										</a>
 									</td>
 									<td>
 										<div class="attribute-signature">public User user5</div>
 									</td>
 								</tr>
-								<tr class="property public">
+								<tr class="property">
 									<td class="attribute-name">
-										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L24"> user6 </a>
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L21">
+											user6
+										</a>
 									</td>
 									<td>
 										<div class="attribute-signature">public User user6</div>
 									</td>
 								</tr>
-								<tr class="property public">
+								<tr class="property">
 									<td class="attribute-name">
-										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L25"> user7 </a>
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L22">
+											user7
+										</a>
 									</td>
 									<td>
 										<div class="attribute-signature">public User user7</div>
 									</td>
 								</tr>
-								<tr class="property public">
+								<tr class="property">
 									<td class="attribute-name">
-										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L26"> user8 </a>
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L23">
+											user8
+										</a>
 									</td>
 									<td>
 										<div class="attribute-signature">public User user8</div>
 									</td>
 								</tr>
-								<tr class="property public">
+								<tr class="property">
 									<td class="attribute-name">
-										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L27"> user9 </a>
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L24">
+											user9
+										</a>
 									</td>
 									<td>
 										<div class="attribute-signature">public User user9</div>
 									</td>
 								</tr>
-								<tr class="property private">
+								<tr class="property">
 									<td class="attribute-name">
-										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L17"> userids </a>
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L14">
+											userids
+										</a>
 									</td>
 									<td>
 										<div class="attribute-signature">private Set&lt;Id&gt; userids</div>
@@ -353,7 +584,14 @@
 								</ul>
 								<div class="method public">
 									<h4 class="method-title" id="BINGOController.BingoController">
-										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L55"> BingoController() </a>
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L51">
+											BingoController()
+										</a>
 									</h4>
 									<div class="method-description">The constructor for BingoController</div>
 									<div class="method-subtitle">Signature</div>
@@ -369,7 +607,7 @@
 									<li class="method public">
 										<a class="methods-toc__entry" href="#BINGOController.getChooseRender"> getChooseRender () </a>
 
-										<div class="methods-toc__description">Method getChooseRender</div>
+										<div class="methods-toc__description">Take parameter and determine how to render the card</div>
 									</li>
 									<li class="method public">
 										<a class="methods-toc__entry" href="#BINGOController.newCard"> newCard () </a>
@@ -391,20 +629,32 @@
 								</ul>
 								<div class="method public">
 									<h4 class="method-title" id="BINGOController.getChooseRender">
-										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L200">
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L195">
 											getChooseRender()
 										</a>
 									</h4>
-									<div class="method-description">Method getChooseRender</div>
+									<div class="method-description">Take parameter and determine how to render the card</div>
 									<div class="method-subtitle">Signature</div>
 
 									<div class="method-signature">public String getChooseRender()</div>
 									<div class="method-subtitle">Returns</div>
-									<div class="method-subtitle-description">String</div>
+									<div class="method-subtitle-description"><code class="code-inline">String</code> Render as pdf or on-screen</div>
 								</div>
 								<div class="method public">
 									<h4 class="method-title" id="BINGOController.newCard">
-										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L233"> newCard() </a>
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L224">
+											newCard()
+										</a>
 									</h4>
 									<div class="method-description">
 										Method NewCard navigates to the same Visualforce page, but flushes the cache and performs a GET. It does NOT place any &#39;p&#39; parameter in the URL, so the
@@ -414,11 +664,18 @@
 
 									<div class="method-signature">public PageReference newCard()</div>
 									<div class="method-subtitle">Returns</div>
-									<div class="method-subtitle-description">PageReference</div>
+									<div class="method-subtitle-description"><code class="code-inline">PageReference</code> refreshed page</div>
 								</div>
 								<div class="method public">
 									<h4 class="method-title" id="BINGOController.showAsPDF">
-										<a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://fixthis.com/BINGOController.cls#L218"> showAsPDF() </a>
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L210">
+											showAsPDF()
+										</a>
 									</h4>
 									<div class="method-description">
 										Method showAsPDF navigates to the same Visualforce page, but flushes the cache and performs a GET. It also places the &#39;p&#39; parameter in the URL, so
@@ -429,7 +686,7 @@
 
 									<div class="method-signature">public PageReference showAsPDF()</div>
 									<div class="method-subtitle">Returns</div>
-									<div class="method-subtitle-description">PageReference</div>
+									<div class="method-subtitle-description"><code class="code-inline">PageReference</code> New Page, as PDF</div>
 								</div>
 							</div>
 						</div>
