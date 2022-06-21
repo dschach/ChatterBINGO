@@ -6,7 +6,7 @@ engine:
     #  sourceUrl: https://fixthis.com
   targetDirectory: '${workspaceFolder}/docs'
   title: Chatter BINGO code documentation
-  subtitle: Documentation for <a target="_blank" rel="noopener noreferrer" href="https://github.com/dschach/projectname">Chatter BINGO</a>
+  subtitle: Documentation for <a target="_blank" rel="noopener noreferrer" href="https://github.com/dschach/ChatterBINGO">Chatter BINGO</a>
   sortOrder: alpha
   cleanDir: true
   showTOCSnippets: true
