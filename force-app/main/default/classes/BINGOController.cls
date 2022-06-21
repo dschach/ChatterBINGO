@@ -1,15 +1,12 @@
+@SuppressWarnings('PMD.AvoidGlobalModifier, PMD.Documentation-ApexDoc, PMD.ExcessivePublicCount, PMD.ApexDoc')
 /**
-    BingoController controls the BINGO page and both BINGO components.
-
-    @author David Schach
-
-    Dev Team Chris Shackelford
-            Brad Gross
-
-    @version     2.1 2011-02-18
-
-*/
-@SuppressWarnings('PMD.AvoidGlobalModifier, PMD.Documentation-ApexDoc')
+ * BingoController controls the BINGO page and both BINGO components.
+ * @author Chris Shackelford
+ * @author David Schach
+ * @author Brad Gross
+ * @since 2.1 2011-02-18
+ * @group BINGO
+ */
 global with sharing class BINGOController {
 	private Id myid;
 	public List<User> bingos { get; private set; }
@@ -49,9 +46,8 @@ global with sharing class BINGOController {
 	private static final Integer QUERY_LIMIT = 999;
 
 	/**
-        The constructor for BingoController
-    */
-
+	 *  The constructor for BingoController
+	 */
 	public BingoController() {
 		myid = UserInfo.getUserId();
 		userids = new Set<Id>();
@@ -192,11 +188,10 @@ global with sharing class BINGOController {
 	}
 
 	/**
-        Method getChooseRender
-    
-        @return String
-    */
-
+	 * Take parameter and determine how to render the card
+	 *
+	 * @return  `String` Render as pdf or on-screen
+	 */
 	public String getChooseRender() {
 		if (ApexPages.currentPage().getParameters().get('p') != null) {
 			return 'pdf';
@@ -206,15 +201,12 @@ global with sharing class BINGOController {
 	}
 
 	/**
-        Method showAsPDF navigates to the same Visualforce page, but flushes the cache and
-        performs a GET.  It also places the 'p' parameter in the URL, so ChooseRender
-        returns 'pdf' to the page RenderAs attribute.
-        Note: This also reshuffles the BINGO card, so this does NOT merely display the current
-        BINGO card as a pdf.
-    
-        @return PageReference
-    */
-
+	 * Method showAsPDF navigates to the same Visualforce page, but flushes the cache and performs a GET.
+	 * It also places the 'p' parameter in the URL, so ChooseRender  returns 'pdf' to the page RenderAs attribute.
+	 * Note: This also reshuffles the BINGO card, so this does NOT merely display the current BINGO card as a pdf.
+	 *
+	 * @return  `PageReference` New Page, as PDF
+	 */
 	public PageReference showAsPDF() {
 		PageReference pdfPage = ApexPages.currentPage();
 		pdfpage.getParameters().put('p', 'p');
@@ -223,27 +215,15 @@ global with sharing class BINGOController {
 	}
 
 	/**
-        Method NewCard navigates to the same Visualforce page, but flushes the cache and
-        performs a GET.  It does NOT place any 'p' parameter in the URL, so the new page
-        renders as html.  This effectively reshuffles the BINGO card.
-    
-        @return PageReference
-    */
-
+	 * Method NewCard navigates to the same Visualforce page, but flushes the cache and performs a GET.
+	 * It does NOT place any 'p' parameter in the URL, so the new page renders as html.
+	 * This effectively reshuffles the BINGO card.
+	 *
+	 * @return `PageReference` refreshed page
+	 */
 	public PageReference newCard() {
 		PageReference pageRef = Page.BINGO;
 		pageRef.setRedirect(true);
 		return pageRef;
 	}
-
-	/**
-        Method deprecated, now that renderAs is included in Page.BINGO.
-    */
-	/*
-        public PageReference MakePDF(){
-        PageReference pageRef = Page.BINGO_PDF;
-        pageRef.setRedirect(false);
-        return pageRef;
-        }
-    */
 }
