@@ -16,6 +16,8 @@ on:
       - 'force-app/**'
       - 'pmd/**'
       - 'config/**'
+      - '.github/workflows/**'
+      - 'package.json'
 
 # Jobs to be executed
 jobs:
