@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 # Jobs to be executed
 jobs:
-  scratch-org-test:
+  scratch-org-apex-tests:
     runs-on: ubuntu-latest
     if: ${{ github.actor != 'dependabot[bot]' }}
     steps:
@@ -18,27 +18,18 @@ jobs:
       - name: 'Checkout source code'
         uses: actions/checkout@v3
 
-      # Install PMD
-      - name: 'Install PMD'
-        run: |
-          PMD_VERSION=$(curl -s https://api.github.com/repos/pmd/pmd/releases/latest | grep '.tag_name' | sed 's:.*/::' | sed 's:",::')
-          wget https://github.com/pmd/pmd/releases/download/pmd_releases%2F$PMD_VERSION/pmd-bin-$PMD_VERSION.zip
-          unzip pmd-bin-$PMD_VERSION.zip -d ~
-          mv ~/pmd-bin-$PMD_VERSION ~/pmd
-          ~/pmd/bin/run.sh pmd --version
-
-      # Run PMD scan
-      - name: 'Run PMD scan'
-        run: ~/pmd/bin/run.sh pmd -d force-app -R pmd/deployRules.xml -f text --cache .pmdCache --minimum-priority 2 --ignore-list .pmdignore
-
       # Install Salesforce CLI
-      - name: 'Install Salesforce CLI'
+      - name: 'Install Salesforce sfdx CLI'
         run: |
-          wget https://developer.salesforce.com/media/salesforce-cli/sfdx/channels/stable/sfdx-linux-x64.tar.xz
-          mkdir ~/sfdx
-          tar xJf sfdx-linux-x64.tar.xz -C ~/sfdx --strip-components 1
-          echo "$HOME/sfdx/bin" >> $GITHUB_PATH
-          ~/sfdx/bin/sfdx version
+          npm install sfdx-cli --location=global
+          nodeInstallPath=$(npm config get prefix)
+          echo "$nodeInstallPath/bin" >> $GITHUB_PATH
+          sfdx --version
+
+      - name: 'Install Salesforce sf CLI'
+        run: |
+          npm install @salesforce/cli --global
+          sf --version
 
       # Store secret for dev hub
       - name: 'Populate auth file with DEVHUB_SFDX_URL secret'
@@ -50,34 +41,62 @@ jobs:
               echo "Missing DEVHUB_SFDX_URL secret. Is this workflow running on a fork?";
               exit 1;
           fi
-
       # Authenticate dev hub
       - name: 'Authenticate Dev Hub'
-        run: sfdx auth:sfdxurl:store -f ./DEVHUB_SFDX_URL.txt -a devhub -d
+        run: sf org login sfdx-url --sfdx-url-file ./DEVHUB_SFDX_URL.txt --alias devhub --set-default-dev-hub
+
+      # Add namespace to project config
+      - name: Add namespace to project config
+        run: |
+          sed -i 's,"namespace": "","namespace": "",' sfdx-project.json
 
       # Create scratch org
       - name: 'Create scratch org'
-        run: sfdx force:org:create -f config/project-scratch-def.json -a ChatterBINGO -s -d 1 -w 20 --noancestors
+        run: sf org create scratch --definition-file config/project-scratch-def.json --alias ChatterBINGO --set-default --no-ancestors --duration-days 1 --wait 20 --target-dev-hub devhub
 
       # Deploy source to scratch org
       - name: 'Push source to scratch org'
-        run: sfdx force:source:push
-
-      # Assign permissionset
-      - name: 'Assign permissionset to default user'
-        run: sfdx force:user:permset:assign -n ChatterBINGO
+        run: sf project deploy start
 
       # Run Apex tests in scratch org
       - name: 'Run Apex tests'
-        run: sfdx force:apex:test:run -c -r human -l RunLocalTests -w 20 -d ./
+        run: sf apex run test --code-coverage --detailed-coverage --result-format human --wait 20 --test-level RunLocalTests --output-dir ./
 
-      - name: Upload code coverage for Apex to Codecov.io
+      # Upload code coverage to Codecov.io
+      - name: 'Upload code coverage for Apex to Codecov.io'
         uses: codecov/codecov-action@v3
         with:
           flags: Apex
-          token: 6200cf4c-8de0-4a7f-a047-2dc2b92c89cd
+          token: ${{ secrets.CODECOV_TOKEN }}
 
       # Housekeeping
       - name: 'Delete scratch org'
         if: always()
-        run: sfdx force:org:delete -p -u ChatterBINGO
+        run: sf org delete scratch --no-prompt --target-org ChatterBINGO
+
+      # Remove namespace from project config
+      - name: Remove namespace from project config
+        run: |
+          sed -i 's,"namespace": "","namespace": "",' sfdx-project.json
+
+  sfdx-scanner:
+    runs-on: ubuntu-latest
+    if: ${{ github.actor != 'dependabot[bot]' }}
+    steps:
+      # Checkout the source code
+      - name: 'Checkout source code'
+        uses: actions/checkout@v3
+
+      - name: Install SFDX CLI and Scanner
+        run: |
+          npm install sfdx-cli -g
+          sfdx plugins:install @salesforce/sfdx-scanner
+
+      - name: Run SFDX Scanner - Report findings as comments
+        uses: mitchspano/sfdx-scan-pull-request@v0.1.14
+        with:
+          pmdconfig: 'pmd/ruleset.xml'
+          severity-threshold: 2
+          engine: 'pmd'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
