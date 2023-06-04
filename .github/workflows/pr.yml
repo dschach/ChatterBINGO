@@ -80,7 +80,7 @@ jobs:
         run: |
           sed -i 's,"namespace": "","namespace": "",' sfdx-project.json
 
-  sfdx-scanner:
+  scan-pmd-action:
     runs-on: ubuntu-latest
     if: ${{ github.actor != 'dependabot[bot]' }}
     steps:
@@ -88,16 +88,22 @@ jobs:
       - name: 'Checkout source code'
         uses: actions/checkout@v3
 
-      - name: Install SFDX CLI and Scanner
-        run: |
-          npm install sfdx-cli
-          npx sfdx plugins:install @salesforce/sfdx-scanner
-
-      - name: Run SFDX Scanner - Report findings as comments
-        uses: mitchspano/sfdx-scan-pull-request@v0.1.14
+      - name: 'Setup java'
+        uses: actions/setup-java@v3
         with:
-          pmdconfig: 'pmd/ruleset.xml'
-          severity-threshold: 2
-          engine: 'pmd'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          distribution: 'temurin'
+          java-version: '11'
+      # Run PMD scan
+      - name: 'Perform PMD scan with PMD action'
+        uses: pmd/pmd-github-action@v1
+        id: pmd-action
+        with:
+          version: 'latest'
+          sourcePath: 'force-app'
+          rulesets: 'pmd/ruleset.xml'
+          analyzeModifiedFilesOnly: false
+          createGitHubAnnotations: true
+      # Check for PMD violations
+      - name: 'Check for PMD violations'
+        if: steps.pmd-action.outputs.violations != 0
+        run: exit 1
