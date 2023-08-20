@@ -25,6 +25,10 @@ jobs:
           npm install @salesforce/cli --global
           sf --version
 
+      # Log out of all orgs to avoid refresh token error
+      - name: 'Log out of all orgs'
+        run: sf org logout --target-org devhub
+
       # Store secret for dev hub
       - name: 'Populate auth file with DEVHUB_SFDX_URL secret'
         shell: bash
