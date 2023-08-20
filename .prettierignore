@@ -24,6 +24,8 @@ data/
 sfdx-project.json
 dependencies.json
 
+CHANGELOG.md
+
 # ApexDox
 docs/assets/highlight.js
 doc-assets/highlight.js

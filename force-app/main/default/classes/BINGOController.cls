@@ -4,14 +4,15 @@
  * @author Chris Shackelford
  * @author David Schach
  * @author Brad Gross
- * @since 2.1 2011-02-18
+ * @since 2011-02-18 First revision
+ * @since 2023-08 v1.1
  * @group BINGO
  */
 global with sharing class BINGOController {
-	private Id myid;
+	private Id myId;
 	public List<User> bingos { get; private set; }
-	private List<User> allusers;
-	private Set<Id> userids;
+	private List<User> allUsers;
+	private Set<Id> userIDs;
 	public User me { get; set; }
 	public User user1 { get; set; }
 	public User user2 { get; set; }
@@ -39,53 +40,55 @@ global with sharing class BINGOController {
 	public User user24 { get; set; }
 	public User user25 { get; set; }
 
-	//public List<User> bingousers {get; set;}
-
+	/**
+	 * We know the size of a standard BINGO board
+	 */
 	private static final Integer TOTAL_SQUARES = 25;
-
+	/**
+	 * Set an upper limit for records to query - important in large orgs
+	 * like the Dreamforce 2010 org!
+	 */
 	private static final Integer QUERY_LIMIT = 999;
 
 	/**
 	 *  The constructor for BingoController
 	 */
 	public BingoController() {
-		myid = UserInfo.getUserId();
-		userids = new Set<Id>();
+		myId = UserInfo.getUserId();
+		userIDs = new Set<Id>();
 
 		// Users Following Me
-		for (EntitySubscription es : [SELECT Id, ParentId, SubscriberId FROM EntitySubscription WHERE ParentId = :myid LIMIT :QUERY_LIMIT]) {
-			userids.add(es.SubscriberId);
+		for (EntitySubscription es : [SELECT Id, ParentId, SubscriberId FROM EntitySubscription WHERE ParentId = :myId LIMIT :QUERY_LIMIT]) {
+			userIDs.add(es.SubscriberId);
 		}
 
 		// Users I'm Following
-		for (EntitySubscription es : [SELECT Id, SubscriberId, ParentId FROM EntitySubscription WHERE SubscriberId = :myid LIMIT :QUERY_LIMIT]) {
-			if (
-				('' + es.Parentid).substring(0, 3) ==
-				'005' // users only
-			) {
-				userids.add(es.ParentId);
+		for (EntitySubscription es : [SELECT Id, SubscriberId, ParentId FROM EntitySubscription WHERE SubscriberId = :myId LIMIT :QUERY_LIMIT]) {
+			/* Only include Users we are following. No records! */
+			// prettier-ignore
+			if (('' + es.Parentid).substring(0, 3) == '005') {
+				userIDs.add(es.ParentId);
 			}
 		}
 
-		allusers = [SELECT Id, smallphotourl, FullPhotoUrl, Name FROM User WHERE Id IN :userids AND IsActive = TRUE];
-		Set<Integer> usedindices = new Set<Integer>();
+		allUsers = [SELECT Id, smallphotourl, FullPhotoUrl, Name FROM User WHERE Id IN :userIDs AND IsActive = TRUE];
+		Set<Integer> usedIndices = new Set<Integer>();
 		bingos = new List<User>();
 
-		while (usedindices.size() < allusers.size()) {
-			Integer index = math.round(Math.random() * (allusers.size() - 1));
+		while (usedIndices.size() < allUsers.size()) {
+			Integer index = Math.round(Math.random() * (allUsers.size() - 1));
 
-			//system.debug('INDEX VALUE: ' + index);
-			if (!usedindices.contains(index)) {
-				usedindices.add(index);
-				bingos.add(allusers[index]);
+			if (!usedIndices.contains(index)) {
+				usedIndices.add(index);
+				bingos.add(allUsers[index]);
 
-				if (usedindices.size() > TOTAL_SQUARES) {
+				if (usedIndices.size() > TOTAL_SQUARES) {
 					break;
 				} // Break WHILE loop
 			}
 		}
 
-		me = [SELECT Id, SmallPhotoUrl, FullPhotoUrl, name FROM User WHERE Id = :myid];
+		me = [SELECT Id, SmallPhotoUrl, FullPhotoUrl, Name FROM User WHERE Id = :myId];
 
 		if (bingos.size() >= 1) {
 			user1 = bingos[0];
@@ -190,8 +193,9 @@ global with sharing class BINGOController {
 
 	/**
 	 * Take parameter and determine how to render the card
+	 * <br>If parameter `p` has any value, will render as pdf.
 	 *
-	 * @return  `String` Render as pdf or on-screen
+	 * @return  `String` Render as pdf (pdf) or on-screen (null)
 	 */
 	public String getChooseRender() {
 		if (ApexPages.currentPage().getParameters().get('p') != null) {
@@ -203,8 +207,8 @@ global with sharing class BINGOController {
 
 	/**
 	 * Method showAsPDF navigates to the same Visualforce page, but flushes the cache and performs a GET.
-	 * It also places the 'p' parameter in the URL, so ChooseRender  returns 'pdf' to the page RenderAs attribute.
-	 * Note: This also reshuffles the BINGO card, so this does NOT merely display the current BINGO card as a pdf.
+	 * <br>It also places the 'p' parameter in the URL, so ChooseRender returns 'pdf' to the page RenderAs attribute.
+	 * <br>Note: This also reshuffles the BINGO card, so this does NOT merely display the current BINGO card as a pdf.
 	 *
 	 * @return  `PageReference` New Page, as PDF
 	 */
@@ -216,9 +220,9 @@ global with sharing class BINGOController {
 	}
 
 	/**
-	 * Method NewCard navigates to the same Visualforce page, but flushes the cache and performs a GET.
-	 * It does NOT place any 'p' parameter in the URL, so the new page renders as html.
-	 * This effectively reshuffles the BINGO card.
+	 * Method newCard navigates to the same Visualforce page, but flushes the cache and performs a GET.
+	 * <br>It does NOT place any 'p' parameter in the URL, so the new page renders as html.
+	 * <br>This effectively reshuffles the BINGO card.
 	 *
 	 * @return `PageReference` refreshed page
 	 */

@@ -1,5 +1,5 @@
 <apex:page controller="BINGOController" title="Dreamforce BINGO" showheader="true" sidebar="false" renderAs="{!chooserender}">
-	<apex:stylesheet value="{!URLFOR($Resource.ChatterBingo, 'BingoCSS.css')}" />
+	<apex:stylesheet value="{!URLFOR($Resource.ChatterBINGO, 'BingoCSS.css')}" />
 
 	<center>
 		<apex:form rendered="{!$CurrentPage.parameters.p == null}">
