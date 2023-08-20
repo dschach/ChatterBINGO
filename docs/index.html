@@ -19,7 +19,10 @@
 			<div id="logo-container">
 				<div class="title">Chatter BINGO code documentation</div>
 				<img src="assets/logo.png" />
-				<div class="subtitle">Documentation for <a target="_blank" rel="noopener noreferrer" href="https://github.com/dschach/ChatterBINGO">Chatter BINGO</a></div>
+				<div class="subtitle">
+					Documentation for
+					<a target="_blank" rel="noopener noreferrer" href="https://github.com/dschach/ChatterBINGO">Chatter BINGO</a>
+				</div>
 			</div>
 			<div id="search-wrapper">
 				<div class="search-icon"></div>
@@ -28,7 +31,7 @@
 			<ul id="search-results" class=""></ul>
 			<div class="navbar">
 				<nav role="navigation">
-					<a class="nav-header" id="home" href="javascript:void(0)" onclick="goToLocation('index.html');"> Home </a>
+					<a class="nav-header" id="home" href="javascript:void(0)" onclick="goToLocation('index.html');">Home</a>
 					<details id="BINGO" class="group-name">
 						<summary id="header-BINGO" class="nav-header">
 							<span>BINGO</span>
@@ -49,37 +52,55 @@
 		<table id="content">
 			<tr>
 				<td class="scoping-panel">
-					Show: <input type="checkbox" checked="true" id="cbx-all" onclick="toggleAllScopes(this.checked);" /> <label for="cbx-all">All</label>&nbsp;&nbsp;
+					Show:
+					<input type="checkbox" checked="true" id="cbx-all" onclick="toggleAllScopes(this.checked);" />
+					<label for="cbx-all">All</label>
+					&nbsp;&nbsp;
 					<input type="checkbox" checked="true" id="cbx-global" onclick="toggleScope('global', this.checked);" />
-					<label for="cbx-global"> global </label>&nbsp;&nbsp;<input type="checkbox" checked="true" id="cbx-public" onclick="toggleScope('public', this.checked);" />
-					<label for="cbx-public"> public </label>&nbsp;&nbsp;<input type="checkbox" checked="true" id="cbx-protected" onclick="toggleScope('protected', this.checked);" />
-					<label for="cbx-protected"> protected </label>&nbsp;&nbsp;<input type="checkbox" checked="true" id="cbx-private" onclick="toggleScope('private', this.checked);" />
-					<label for="cbx-private"> private </label>&nbsp;&nbsp;<input type="checkbox" checked="true" id="cbx-webservice" onclick="toggleScope('webservice', this.checked);" />
-					<label for="cbx-webservice"> webService </label>&nbsp;&nbsp;<input
-						type="checkbox"
-						checked="true"
-						id="cbx-testmethod"
-						onclick="toggleScope('testmethod', this.checked);" />
-					<label for="cbx-testmethod"> testMethod </label>
+					<label for="cbx-global">global</label>
+					&nbsp;&nbsp;
+					<input type="checkbox" checked="true" id="cbx-public" onclick="toggleScope('public', this.checked);" />
+					<label for="cbx-public">public</label>
+					&nbsp;&nbsp;
+					<input type="checkbox" checked="true" id="cbx-protected" onclick="toggleScope('protected', this.checked);" />
+					<label for="cbx-protected">protected</label>
+					&nbsp;&nbsp;
+					<input type="checkbox" checked="true" id="cbx-private" onclick="toggleScope('private', this.checked);" />
+					<label for="cbx-private">private</label>
+					&nbsp;&nbsp;
+					<input type="checkbox" checked="true" id="cbx-webservice" onclick="toggleScope('webservice', this.checked);" />
+					<label for="cbx-webservice">webService</label>
+					&nbsp;&nbsp;
+					<input type="checkbox" checked="true" id="cbx-testmethod" onclick="toggleScope('testmethod', this.checked);" />
+					<label for="cbx-testmethod">testMethod</label>
 				</td>
 			</tr>
 			<tr>
 				<td class="doc-page">
 					<h2 class="section-title">Home</h2>
-					<h1 id="chatterbingo">ChatterBINGO</h1>
+					<h1>ChatterBINGO</h1>
+					<p>
+						<a href="https://github.com/dschach/ChatterBINGO/actions/workflows/ci.yml">
+							<img src="https://github.com/dschach/ChatterBINGO/actions/workflows/ci.yml/badge.svg?branch=main" alt="Commit Workflow" />
+						</a>
+						<br />
+						<a href="https://github.com/dschach/ChatterBINGO/actions/workflows/pr.yml">
+							<img src="https://github.com/dschach/ChatterBINGO/actions/workflows/pr.yml/badge.svg?branch=main" alt="PR Validation" />
+						</a>
+					</p>
 					<p>ChatterBINGO - the only community-created app used at a Dreamforce conference!</p>
 					<p>
 						To see the AppExchange listing, go to
-						<a href="https://appexchange.salesforce.com/listingDetail?listingId=a0N30000003JfOwEAK"
-							>https://appexchange.salesforce.com/listingDetail?listingId=a0N30000003JfOwEAK</a
-						>
+						<a href="https://appexchange.salesforce.com/listingDetail?listingId=a0N30000003JfOwEAK">
+							https://appexchange.salesforce.com/listingDetail?listingId=a0N30000003JfOwEAK
+						</a>
 					</p>
 				</td>
 			</tr>
 			<tr>
 				<td class="footer">
 					<div>
-						<a href="https://github.com/no-stack-dub-sack/apexdox-vs-code" target="_blank" rel="noopener noreferrer"> Powered By ApexDox VS Code </a>
+						<a href="https://github.com/no-stack-dub-sack/apexdox-vs-code" target="_blank" rel="noopener noreferrer">Powered By ApexDox VS Code</a>
 					</div>
 				</td>
 			</tr>

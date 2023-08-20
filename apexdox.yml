@@ -1,7 +1,7 @@
 engine:
   source:
     - path: '${workspaceFolder}/force-app/main/default/classes'
-      sourceUrl: https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes
+      sourceUrl: https://github.com/dschach/ChatterBINGO/tree/main/
     #- path: '${workspaceFolder}/force-app/main/default/tests'
     #  sourceUrl: https://fixthis.com
   targetDirectory: '${workspaceFolder}/docs'
@@ -25,7 +25,7 @@ engine:
     - '${workspaceFolder}/doc-assets/favicon.png'
     - '${workspaceFolder}/doc-assets/icon.png'
     - '${workspaceFolder}/doc-assets/index.css'
-    - '${workspaceFolder}/doc-assets/index.js'
+    #- '${workspaceFolder}/doc-assets/index.js'
     - '${workspaceFolder}/doc-assets/highlight.js'
     - '${workspaceFolder}/doc-assets/highlight.css'
     - '${workspaceFolder}/README.md'

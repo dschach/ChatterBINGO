@@ -19,7 +19,10 @@
 			<div id="logo-container">
 				<div class="title">Chatter BINGO code documentation</div>
 				<img src="assets/logo.png" />
-				<div class="subtitle">Documentation for <a target="_blank" rel="noopener noreferrer" href="https://github.com/dschach/ChatterBINGO">Chatter BINGO</a></div>
+				<div class="subtitle">
+					Documentation for
+					<a target="_blank" rel="noopener noreferrer" href="https://github.com/dschach/ChatterBINGO">Chatter BINGO</a>
+				</div>
 			</div>
 			<div id="search-wrapper">
 				<div class="search-icon"></div>
@@ -28,7 +31,7 @@
 			<ul id="search-results" class=""></ul>
 			<div class="navbar">
 				<nav role="navigation">
-					<a class="nav-header" id="home" href="javascript:void(0)" onclick="goToLocation('index.html');"> Home </a>
+					<a class="nav-header" id="home" href="javascript:void(0)" onclick="goToLocation('index.html');">Home</a>
 					<details id="BINGO" class="group-name">
 						<summary id="header-BINGO" class="nav-header">
 							<span>BINGO</span>
@@ -49,18 +52,27 @@
 		<table id="content">
 			<tr>
 				<td class="scoping-panel">
-					Show: <input type="checkbox" checked="true" id="cbx-all" onclick="toggleAllScopes(this.checked);" /> <label for="cbx-all">All</label>&nbsp;&nbsp;
+					Show:
+					<input type="checkbox" checked="true" id="cbx-all" onclick="toggleAllScopes(this.checked);" />
+					<label for="cbx-all">All</label>
+					&nbsp;&nbsp;
 					<input type="checkbox" checked="true" id="cbx-global" onclick="toggleScope('global', this.checked);" />
-					<label for="cbx-global"> global </label>&nbsp;&nbsp;<input type="checkbox" checked="true" id="cbx-public" onclick="toggleScope('public', this.checked);" />
-					<label for="cbx-public"> public </label>&nbsp;&nbsp;<input type="checkbox" checked="true" id="cbx-protected" onclick="toggleScope('protected', this.checked);" />
-					<label for="cbx-protected"> protected </label>&nbsp;&nbsp;<input type="checkbox" checked="true" id="cbx-private" onclick="toggleScope('private', this.checked);" />
-					<label for="cbx-private"> private </label>&nbsp;&nbsp;<input type="checkbox" checked="true" id="cbx-webservice" onclick="toggleScope('webservice', this.checked);" />
-					<label for="cbx-webservice"> webService </label>&nbsp;&nbsp;<input
-						type="checkbox"
-						checked="true"
-						id="cbx-testmethod"
-						onclick="toggleScope('testmethod', this.checked);" />
-					<label for="cbx-testmethod"> testMethod </label>
+					<label for="cbx-global">global</label>
+					&nbsp;&nbsp;
+					<input type="checkbox" checked="true" id="cbx-public" onclick="toggleScope('public', this.checked);" />
+					<label for="cbx-public">public</label>
+					&nbsp;&nbsp;
+					<input type="checkbox" checked="true" id="cbx-protected" onclick="toggleScope('protected', this.checked);" />
+					<label for="cbx-protected">protected</label>
+					&nbsp;&nbsp;
+					<input type="checkbox" checked="true" id="cbx-private" onclick="toggleScope('private', this.checked);" />
+					<label for="cbx-private">private</label>
+					&nbsp;&nbsp;
+					<input type="checkbox" checked="true" id="cbx-webservice" onclick="toggleScope('webservice', this.checked);" />
+					<label for="cbx-webservice">webService</label>
+					&nbsp;&nbsp;
+					<input type="checkbox" checked="true" id="cbx-testmethod" onclick="toggleScope('testmethod', this.checked);" />
+					<label for="cbx-testmethod">testMethod</label>
 				</td>
 			</tr>
 			<tr>
@@ -72,7 +84,7 @@
 								rel="noopener noreferrer"
 								title="Go to source"
 								class="source-link"
-								href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/force-app/main/default/classes/BingoControllerTest.cls#L11">
+								href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BingoControllerTest.cls#L11">
 								BingoControllerTest
 							</a>
 						</h2>
@@ -102,7 +114,7 @@
 											rel="noopener noreferrer"
 											title="Go to source"
 											class="source-link"
-											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/force-app/main/default/classes/BingoControllerTest.cls#L126">
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BingoControllerTest.cls#L126">
 											theProfile
 										</a>
 									</td>
@@ -117,24 +129,24 @@
 							<div class="methods-container">
 								<ul class="methods-toc">
 									<li class="method public">
-										<a class="methods-toc__entry" href="#BingoControllerTest.createRandomWord"> createRandomWord () </a>
+										<a class="methods-toc__entry" href="#BingoControllerTest.createRandomWord">createRandomWord ()</a>
 
 										<div class="methods-toc__description">
 											Random words are required for testing as you will likely run into any word I can insert during a test class and produce false test results.
 										</div>
 									</li>
 									<li class="method public">
-										<a class="methods-toc__entry" href="#BingoControllerTest.createTestUser"> createTestUser (p) </a>
+										<a class="methods-toc__entry" href="#BingoControllerTest.createTestUser">createTestUser (p)</a>
 
 										<div class="methods-toc__description">Creates a new User</div>
 									</li>
 									<li class="method public">
-										<a class="methods-toc__entry" href="#BingoControllerTest.getSuperProfile"> getSuperProfile () </a>
+										<a class="methods-toc__entry" href="#BingoControllerTest.getSuperProfile">getSuperProfile ()</a>
 
 										<div class="methods-toc__description">Helper method to find a ModifyAllData User profile for each of the test users we create.</div>
 									</li>
 									<li class="method testmethod">
-										<a class="methods-toc__entry" href="#BingoControllerTest.testBINGO0"> testBINGO0 () </a>
+										<a class="methods-toc__entry" href="#BingoControllerTest.testBINGO0">testBINGO0 ()</a>
 
 										<div class="methods-toc__description">
 											TestMethod - inserts 0 users, has them each follow the running User, and renders the BINGO card. This method also verifies that the card is first shown as a
@@ -142,7 +154,7 @@
 										</div>
 									</li>
 									<li class="method testmethod">
-										<a class="methods-toc__entry" href="#BingoControllerTest.testBINGO2"> testBINGO2 () </a>
+										<a class="methods-toc__entry" href="#BingoControllerTest.testBINGO2">testBINGO2 ()</a>
 
 										<div class="methods-toc__description">
 											TestMethod - inserts 2 users, has them each follow the running User, and renders the BINGO card. It also has the running User follow each of the 2 inserted
@@ -150,12 +162,12 @@
 										</div>
 									</li>
 									<li class="method testmethod">
-										<a class="methods-toc__entry" href="#BingoControllerTest.testBINGO30"> testBINGO30 () </a>
+										<a class="methods-toc__entry" href="#BingoControllerTest.testBINGO30">testBINGO30 ()</a>
 
 										<div class="methods-toc__description">TestMethod - inserts 30 users, has them each follow the running User, and renders the BINGO card.</div>
 									</li>
 									<li class="method testmethod">
-										<a class="methods-toc__entry" href="#BingoControllerTest.testShowAsPDF"> testShowAsPDF () </a>
+										<a class="methods-toc__entry" href="#BingoControllerTest.testShowAsPDF">testShowAsPDF ()</a>
 
 										<div class="methods-toc__description">TestMethod - inserts 0 users, has them each follow the running User, and renders the BINGO card as a PDF.</div>
 									</li>
@@ -167,7 +179,7 @@
 											rel="noopener noreferrer"
 											title="Go to source"
 											class="source-link"
-											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/force-app/main/default/classes/BingoControllerTest.cls#L178">
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BingoControllerTest.cls#L178">
 											createRandomWord()
 										</a>
 									</h4>
@@ -178,7 +190,10 @@
 
 									<div class="method-signature">public static String createRandomWord()</div>
 									<div class="method-subtitle">Returns</div>
-									<div class="method-subtitle-description"><code class="code-inline">String</code> random word</div>
+									<div class="method-subtitle-description">
+										<code class="code-inline">String</code>
+										random word
+									</div>
 								</div>
 								<div class="method public">
 									<h4 class="method-title" id="BingoControllerTest.createTestUser">
@@ -187,7 +202,7 @@
 											rel="noopener noreferrer"
 											title="Go to source"
 											class="source-link"
-											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/force-app/main/default/classes/BingoControllerTest.cls#L153">
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BingoControllerTest.cls#L153">
 											createTestUser(p)
 										</a>
 									</h4>
@@ -197,10 +212,16 @@
 									<div class="method-signature">public static User createTestUser(Profile p)</div>
 									<div class="method-subtitle">Parameters</div>
 									<div class="param-name">p</div>
-									<div class="param-type">Type: <code class="code-inline">Profile</code></div>
+									<div class="param-type">
+										Type:
+										<code class="code-inline">Profile</code>
+									</div>
 									<div class="param-description">User Profile</div>
 									<div class="method-subtitle">Returns</div>
-									<div class="method-subtitle-description"><code class="code-inline">User</code> Created User testUser</div>
+									<div class="method-subtitle-description">
+										<code class="code-inline">User</code>
+										Created User testUser
+									</div>
 									<div class="method-subtitle">Author</div>
 									<div class="method-subtitle-description">David Schach</div>
 								</div>
@@ -211,7 +232,7 @@
 											rel="noopener noreferrer"
 											title="Go to source"
 											class="source-link"
-											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/force-app/main/default/classes/BingoControllerTest.cls#L132">
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BingoControllerTest.cls#L132">
 											getSuperProfile()
 										</a>
 									</h4>
@@ -229,7 +250,7 @@
 											rel="noopener noreferrer"
 											title="Go to source"
 											class="source-link"
-											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/force-app/main/default/classes/BingoControllerTest.cls#L98">
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BingoControllerTest.cls#L98">
 											testBINGO0()
 										</a>
 									</h4>
@@ -250,7 +271,7 @@
 											rel="noopener noreferrer"
 											title="Go to source"
 											class="source-link"
-											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/force-app/main/default/classes/BingoControllerTest.cls#L54">
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BingoControllerTest.cls#L54">
 											testBINGO2()
 										</a>
 									</h4>
@@ -269,7 +290,7 @@
 											rel="noopener noreferrer"
 											title="Go to source"
 											class="source-link"
-											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/force-app/main/default/classes/BingoControllerTest.cls#L16">
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BingoControllerTest.cls#L16">
 											testBINGO30()
 										</a>
 									</h4>
@@ -285,7 +306,7 @@
 											rel="noopener noreferrer"
 											title="Go to source"
 											class="source-link"
-											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/force-app/main/default/classes/BingoControllerTest.cls#L117">
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BingoControllerTest.cls#L117">
 											testShowAsPDF()
 										</a>
 									</h4>
@@ -302,7 +323,7 @@
 			<tr>
 				<td class="footer">
 					<div>
-						<a href="https://github.com/no-stack-dub-sack/apexdox-vs-code" target="_blank" rel="noopener noreferrer"> Powered By ApexDox VS Code </a>
+						<a href="https://github.com/no-stack-dub-sack/apexdox-vs-code" target="_blank" rel="noopener noreferrer">Powered By ApexDox VS Code</a>
 					</div>
 				</td>
 			</tr>
