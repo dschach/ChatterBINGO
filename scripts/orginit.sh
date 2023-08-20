@@ -4,21 +4,18 @@
 #sed -i "" "s|\"namespace\": \"\"|\"namespace\": \"\"|" sfdx-project.json
 
 echo "Cleaning previous scratch org..."
-sfdx force:org:delete -p -u ChatterBINGO
+sf org delete scratch --no-prompt --target-org ChatterBINGO
 
 echo "Creating new scratch org"
-sfdx force:org:create -f config/project-scratch-def.json --durationdays 10 -a ChatterBINGO -s
+sf org create scratch --definition-file config/project-scratch-def.json --duration-days 10 --alias ChatterBINGO --set-default
 
 echo "Pushing metadata"
-sfdx force:source:push
+sf project deploy start
 
 #echo "Assigning Permissions"
-#sfdx force:user:permset:assign -n PermSetName
-
-#echo "Adding sample data"
-#sfdx force:data:tree:import -p ./data/data-plan.json
+sf org assign permset --name PermSetName
 
 echo "Opening org"
-sfdx force:org:open
+sf org open
 
 echo "Org is set up"
