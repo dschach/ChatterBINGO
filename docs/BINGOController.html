@@ -38,10 +38,10 @@
 						</summary>
 						<ul>
 							<!-- menu items -->
-							<li title="BINGOController" id="item-BINGOController" class="nav-item class global" onclick="goToLocation('BINGOController.html');">
+							<li title="BINGOController" id="item-BINGOController" class="nav-item class" onclick="goToLocation('BINGOController.html');">
 								<a tabindex="1" href="javascript:void(0)">BINGOController</a>
 							</li>
-							<li title="BingoControllerTest" id="item-BingoControllerTest" class="nav-item class private" onclick="goToLocation('BingoControllerTest.html');">
+							<li title="BingoControllerTest" id="item-BingoControllerTest" class="nav-item class" onclick="goToLocation('BingoControllerTest.html');">
 								<a tabindex="1" href="javascript:void(0)">BingoControllerTest</a>
 							</li>
 						</ul>
@@ -84,7 +84,7 @@
 								rel="noopener noreferrer"
 								title="Go to source"
 								class="source-link"
-								href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L10">
+								href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L11">
 								BINGOController
 							</a>
 						</h2>
@@ -97,7 +97,8 @@
 							<div class="class-subtitle-description">Chris Shackelford, David Schach, Brad Gross</div>
 							<div class="class-subtitle">Since</div>
 							<div class="class-subtitle-description">
-								<li>2.1 2011-02-18</li>
+								<li>2011-02-18 First revision</li>
+								<li>2023-08 v1.1</li>
 							</div>
 						</div>
 						<div class="subsection properties BINGOController">
@@ -106,473 +107,10 @@
 								<tr>
 									<th>Name</th>
 									<th>Signature</th>
+
+									<th>Description</th>
 								</tr>
-								<tr class="property private">
-									<td class="attribute-name">
-										<a
-											target="_blank"
-											rel="noopener noreferrer"
-											title="Go to source"
-											class="source-link"
-											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L13">
-											allusers
-										</a>
-									</td>
-									<td>
-										<div class="attribute-signature">private List&lt;User&gt; allusers</div>
-									</td>
-								</tr>
-								<tr class="property public">
-									<td class="attribute-name">
-										<a
-											target="_blank"
-											rel="noopener noreferrer"
-											title="Go to source"
-											class="source-link"
-											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L12">
-											bingos
-										</a>
-									</td>
-									<td>
-										<div class="attribute-signature">public List&lt;User&gt; bingos</div>
-									</td>
-								</tr>
-								<tr class="property public">
-									<td class="attribute-name">
-										<a
-											target="_blank"
-											rel="noopener noreferrer"
-											title="Go to source"
-											class="source-link"
-											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L15">
-											me
-										</a>
-									</td>
-									<td>
-										<div class="attribute-signature">public User me</div>
-									</td>
-								</tr>
-								<tr class="property private">
-									<td class="attribute-name">
-										<a
-											target="_blank"
-											rel="noopener noreferrer"
-											title="Go to source"
-											class="source-link"
-											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L11">
-											myid
-										</a>
-									</td>
-									<td>
-										<div class="attribute-signature">private Id myid</div>
-									</td>
-								</tr>
-								<tr class="property private">
-									<td class="attribute-name">
-										<a
-											target="_blank"
-											rel="noopener noreferrer"
-											title="Go to source"
-											class="source-link"
-											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L46">
-											QUERY_LIMIT
-										</a>
-									</td>
-									<td>
-										<div class="attribute-signature">private static final Integer QUERY_LIMIT</div>
-									</td>
-								</tr>
-								<tr class="property private">
-									<td class="attribute-name">
-										<a
-											target="_blank"
-											rel="noopener noreferrer"
-											title="Go to source"
-											class="source-link"
-											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L44">
-											TOTAL_SQUARES
-										</a>
-									</td>
-									<td>
-										<div class="attribute-signature">private static final Integer TOTAL_SQUARES</div>
-									</td>
-								</tr>
-								<tr class="property public">
-									<td class="attribute-name">
-										<a
-											target="_blank"
-											rel="noopener noreferrer"
-											title="Go to source"
-											class="source-link"
-											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L16">
-											user1
-										</a>
-									</td>
-									<td>
-										<div class="attribute-signature">public User user1</div>
-									</td>
-								</tr>
-								<tr class="property public">
-									<td class="attribute-name">
-										<a
-											target="_blank"
-											rel="noopener noreferrer"
-											title="Go to source"
-											class="source-link"
-											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L25">
-											user10
-										</a>
-									</td>
-									<td>
-										<div class="attribute-signature">public User user10</div>
-									</td>
-								</tr>
-								<tr class="property public">
-									<td class="attribute-name">
-										<a
-											target="_blank"
-											rel="noopener noreferrer"
-											title="Go to source"
-											class="source-link"
-											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L26">
-											user11
-										</a>
-									</td>
-									<td>
-										<div class="attribute-signature">public User user11</div>
-									</td>
-								</tr>
-								<tr class="property public">
-									<td class="attribute-name">
-										<a
-											target="_blank"
-											rel="noopener noreferrer"
-											title="Go to source"
-											class="source-link"
-											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L27">
-											user12
-										</a>
-									</td>
-									<td>
-										<div class="attribute-signature">public User user12</div>
-									</td>
-								</tr>
-								<tr class="property public">
-									<td class="attribute-name">
-										<a
-											target="_blank"
-											rel="noopener noreferrer"
-											title="Go to source"
-											class="source-link"
-											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L28">
-											user13
-										</a>
-									</td>
-									<td>
-										<div class="attribute-signature">public User user13</div>
-									</td>
-								</tr>
-								<tr class="property public">
-									<td class="attribute-name">
-										<a
-											target="_blank"
-											rel="noopener noreferrer"
-											title="Go to source"
-											class="source-link"
-											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L29">
-											user14
-										</a>
-									</td>
-									<td>
-										<div class="attribute-signature">public User user14</div>
-									</td>
-								</tr>
-								<tr class="property public">
-									<td class="attribute-name">
-										<a
-											target="_blank"
-											rel="noopener noreferrer"
-											title="Go to source"
-											class="source-link"
-											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L30">
-											user15
-										</a>
-									</td>
-									<td>
-										<div class="attribute-signature">public User user15</div>
-									</td>
-								</tr>
-								<tr class="property public">
-									<td class="attribute-name">
-										<a
-											target="_blank"
-											rel="noopener noreferrer"
-											title="Go to source"
-											class="source-link"
-											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L31">
-											user16
-										</a>
-									</td>
-									<td>
-										<div class="attribute-signature">public User user16</div>
-									</td>
-								</tr>
-								<tr class="property public">
-									<td class="attribute-name">
-										<a
-											target="_blank"
-											rel="noopener noreferrer"
-											title="Go to source"
-											class="source-link"
-											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L32">
-											user17
-										</a>
-									</td>
-									<td>
-										<div class="attribute-signature">public User user17</div>
-									</td>
-								</tr>
-								<tr class="property public">
-									<td class="attribute-name">
-										<a
-											target="_blank"
-											rel="noopener noreferrer"
-											title="Go to source"
-											class="source-link"
-											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L33">
-											user18
-										</a>
-									</td>
-									<td>
-										<div class="attribute-signature">public User user18</div>
-									</td>
-								</tr>
-								<tr class="property public">
-									<td class="attribute-name">
-										<a
-											target="_blank"
-											rel="noopener noreferrer"
-											title="Go to source"
-											class="source-link"
-											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L34">
-											user19
-										</a>
-									</td>
-									<td>
-										<div class="attribute-signature">public User user19</div>
-									</td>
-								</tr>
-								<tr class="property public">
-									<td class="attribute-name">
-										<a
-											target="_blank"
-											rel="noopener noreferrer"
-											title="Go to source"
-											class="source-link"
-											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L17">
-											user2
-										</a>
-									</td>
-									<td>
-										<div class="attribute-signature">public User user2</div>
-									</td>
-								</tr>
-								<tr class="property public">
-									<td class="attribute-name">
-										<a
-											target="_blank"
-											rel="noopener noreferrer"
-											title="Go to source"
-											class="source-link"
-											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L35">
-											user20
-										</a>
-									</td>
-									<td>
-										<div class="attribute-signature">public User user20</div>
-									</td>
-								</tr>
-								<tr class="property public">
-									<td class="attribute-name">
-										<a
-											target="_blank"
-											rel="noopener noreferrer"
-											title="Go to source"
-											class="source-link"
-											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L36">
-											user21
-										</a>
-									</td>
-									<td>
-										<div class="attribute-signature">public User user21</div>
-									</td>
-								</tr>
-								<tr class="property public">
-									<td class="attribute-name">
-										<a
-											target="_blank"
-											rel="noopener noreferrer"
-											title="Go to source"
-											class="source-link"
-											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L37">
-											user22
-										</a>
-									</td>
-									<td>
-										<div class="attribute-signature">public User user22</div>
-									</td>
-								</tr>
-								<tr class="property public">
-									<td class="attribute-name">
-										<a
-											target="_blank"
-											rel="noopener noreferrer"
-											title="Go to source"
-											class="source-link"
-											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L38">
-											user23
-										</a>
-									</td>
-									<td>
-										<div class="attribute-signature">public User user23</div>
-									</td>
-								</tr>
-								<tr class="property public">
-									<td class="attribute-name">
-										<a
-											target="_blank"
-											rel="noopener noreferrer"
-											title="Go to source"
-											class="source-link"
-											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L39">
-											user24
-										</a>
-									</td>
-									<td>
-										<div class="attribute-signature">public User user24</div>
-									</td>
-								</tr>
-								<tr class="property public">
-									<td class="attribute-name">
-										<a
-											target="_blank"
-											rel="noopener noreferrer"
-											title="Go to source"
-											class="source-link"
-											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L40">
-											user25
-										</a>
-									</td>
-									<td>
-										<div class="attribute-signature">public User user25</div>
-									</td>
-								</tr>
-								<tr class="property public">
-									<td class="attribute-name">
-										<a
-											target="_blank"
-											rel="noopener noreferrer"
-											title="Go to source"
-											class="source-link"
-											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L18">
-											user3
-										</a>
-									</td>
-									<td>
-										<div class="attribute-signature">public User user3</div>
-									</td>
-								</tr>
-								<tr class="property public">
-									<td class="attribute-name">
-										<a
-											target="_blank"
-											rel="noopener noreferrer"
-											title="Go to source"
-											class="source-link"
-											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L19">
-											user4
-										</a>
-									</td>
-									<td>
-										<div class="attribute-signature">public User user4</div>
-									</td>
-								</tr>
-								<tr class="property public">
-									<td class="attribute-name">
-										<a
-											target="_blank"
-											rel="noopener noreferrer"
-											title="Go to source"
-											class="source-link"
-											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L20">
-											user5
-										</a>
-									</td>
-									<td>
-										<div class="attribute-signature">public User user5</div>
-									</td>
-								</tr>
-								<tr class="property public">
-									<td class="attribute-name">
-										<a
-											target="_blank"
-											rel="noopener noreferrer"
-											title="Go to source"
-											class="source-link"
-											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L21">
-											user6
-										</a>
-									</td>
-									<td>
-										<div class="attribute-signature">public User user6</div>
-									</td>
-								</tr>
-								<tr class="property public">
-									<td class="attribute-name">
-										<a
-											target="_blank"
-											rel="noopener noreferrer"
-											title="Go to source"
-											class="source-link"
-											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L22">
-											user7
-										</a>
-									</td>
-									<td>
-										<div class="attribute-signature">public User user7</div>
-									</td>
-								</tr>
-								<tr class="property public">
-									<td class="attribute-name">
-										<a
-											target="_blank"
-											rel="noopener noreferrer"
-											title="Go to source"
-											class="source-link"
-											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L23">
-											user8
-										</a>
-									</td>
-									<td>
-										<div class="attribute-signature">public User user8</div>
-									</td>
-								</tr>
-								<tr class="property public">
-									<td class="attribute-name">
-										<a
-											target="_blank"
-											rel="noopener noreferrer"
-											title="Go to source"
-											class="source-link"
-											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L24">
-											user9
-										</a>
-									</td>
-									<td>
-										<div class="attribute-signature">public User user9</div>
-									</td>
-								</tr>
-								<tr class="property private">
+								<tr class="property">
 									<td class="attribute-name">
 										<a
 											target="_blank"
@@ -580,12 +118,541 @@
 											title="Go to source"
 											class="source-link"
 											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L14">
-											userids
+											allUsers
 										</a>
 									</td>
 									<td>
-										<div class="attribute-signature">private Set&lt;Id&gt; userids</div>
+										<div class="attribute-signature">private List&lt;User&gt; allUsers</div>
 									</td>
+
+									<td class="attribute-description"></td>
+								</tr>
+								<tr class="property">
+									<td class="attribute-name">
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L13">
+											bingos
+										</a>
+									</td>
+									<td>
+										<div class="attribute-signature">public List&lt;User&gt; bingos</div>
+									</td>
+
+									<td class="attribute-description"></td>
+								</tr>
+								<tr class="property">
+									<td class="attribute-name">
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L16">
+											me
+										</a>
+									</td>
+									<td>
+										<div class="attribute-signature">public User me</div>
+									</td>
+
+									<td class="attribute-description"></td>
+								</tr>
+								<tr class="property">
+									<td class="attribute-name">
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L12">
+											myId
+										</a>
+									</td>
+									<td>
+										<div class="attribute-signature">private Id myId</div>
+									</td>
+
+									<td class="attribute-description"></td>
+								</tr>
+								<tr class="property">
+									<td class="attribute-name">
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L51">
+											QUERY_LIMIT
+										</a>
+									</td>
+									<td>
+										<div class="attribute-signature">private static final Integer QUERY_LIMIT</div>
+									</td>
+
+									<td class="attribute-description">Set an upper limit for records to query - important in large orgs like the Dreamforce 2010 org!</td>
+								</tr>
+								<tr class="property">
+									<td class="attribute-name">
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L46">
+											TOTAL_SQUARES
+										</a>
+									</td>
+									<td>
+										<div class="attribute-signature">private static final Integer TOTAL_SQUARES</div>
+									</td>
+
+									<td class="attribute-description">We know the size of a standard BINGO board</td>
+								</tr>
+								<tr class="property">
+									<td class="attribute-name">
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L17">
+											user1
+										</a>
+									</td>
+									<td>
+										<div class="attribute-signature">public User user1</div>
+									</td>
+
+									<td class="attribute-description"></td>
+								</tr>
+								<tr class="property">
+									<td class="attribute-name">
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L26">
+											user10
+										</a>
+									</td>
+									<td>
+										<div class="attribute-signature">public User user10</div>
+									</td>
+
+									<td class="attribute-description"></td>
+								</tr>
+								<tr class="property">
+									<td class="attribute-name">
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L27">
+											user11
+										</a>
+									</td>
+									<td>
+										<div class="attribute-signature">public User user11</div>
+									</td>
+
+									<td class="attribute-description"></td>
+								</tr>
+								<tr class="property">
+									<td class="attribute-name">
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L28">
+											user12
+										</a>
+									</td>
+									<td>
+										<div class="attribute-signature">public User user12</div>
+									</td>
+
+									<td class="attribute-description"></td>
+								</tr>
+								<tr class="property">
+									<td class="attribute-name">
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L29">
+											user13
+										</a>
+									</td>
+									<td>
+										<div class="attribute-signature">public User user13</div>
+									</td>
+
+									<td class="attribute-description"></td>
+								</tr>
+								<tr class="property">
+									<td class="attribute-name">
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L30">
+											user14
+										</a>
+									</td>
+									<td>
+										<div class="attribute-signature">public User user14</div>
+									</td>
+
+									<td class="attribute-description"></td>
+								</tr>
+								<tr class="property">
+									<td class="attribute-name">
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L31">
+											user15
+										</a>
+									</td>
+									<td>
+										<div class="attribute-signature">public User user15</div>
+									</td>
+
+									<td class="attribute-description"></td>
+								</tr>
+								<tr class="property">
+									<td class="attribute-name">
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L32">
+											user16
+										</a>
+									</td>
+									<td>
+										<div class="attribute-signature">public User user16</div>
+									</td>
+
+									<td class="attribute-description"></td>
+								</tr>
+								<tr class="property">
+									<td class="attribute-name">
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L33">
+											user17
+										</a>
+									</td>
+									<td>
+										<div class="attribute-signature">public User user17</div>
+									</td>
+
+									<td class="attribute-description"></td>
+								</tr>
+								<tr class="property">
+									<td class="attribute-name">
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L34">
+											user18
+										</a>
+									</td>
+									<td>
+										<div class="attribute-signature">public User user18</div>
+									</td>
+
+									<td class="attribute-description"></td>
+								</tr>
+								<tr class="property">
+									<td class="attribute-name">
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L35">
+											user19
+										</a>
+									</td>
+									<td>
+										<div class="attribute-signature">public User user19</div>
+									</td>
+
+									<td class="attribute-description"></td>
+								</tr>
+								<tr class="property">
+									<td class="attribute-name">
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L18">
+											user2
+										</a>
+									</td>
+									<td>
+										<div class="attribute-signature">public User user2</div>
+									</td>
+
+									<td class="attribute-description"></td>
+								</tr>
+								<tr class="property">
+									<td class="attribute-name">
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L36">
+											user20
+										</a>
+									</td>
+									<td>
+										<div class="attribute-signature">public User user20</div>
+									</td>
+
+									<td class="attribute-description"></td>
+								</tr>
+								<tr class="property">
+									<td class="attribute-name">
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L37">
+											user21
+										</a>
+									</td>
+									<td>
+										<div class="attribute-signature">public User user21</div>
+									</td>
+
+									<td class="attribute-description"></td>
+								</tr>
+								<tr class="property">
+									<td class="attribute-name">
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L38">
+											user22
+										</a>
+									</td>
+									<td>
+										<div class="attribute-signature">public User user22</div>
+									</td>
+
+									<td class="attribute-description"></td>
+								</tr>
+								<tr class="property">
+									<td class="attribute-name">
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L39">
+											user23
+										</a>
+									</td>
+									<td>
+										<div class="attribute-signature">public User user23</div>
+									</td>
+
+									<td class="attribute-description"></td>
+								</tr>
+								<tr class="property">
+									<td class="attribute-name">
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L40">
+											user24
+										</a>
+									</td>
+									<td>
+										<div class="attribute-signature">public User user24</div>
+									</td>
+
+									<td class="attribute-description"></td>
+								</tr>
+								<tr class="property">
+									<td class="attribute-name">
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L41">
+											user25
+										</a>
+									</td>
+									<td>
+										<div class="attribute-signature">public User user25</div>
+									</td>
+
+									<td class="attribute-description"></td>
+								</tr>
+								<tr class="property">
+									<td class="attribute-name">
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L19">
+											user3
+										</a>
+									</td>
+									<td>
+										<div class="attribute-signature">public User user3</div>
+									</td>
+
+									<td class="attribute-description"></td>
+								</tr>
+								<tr class="property">
+									<td class="attribute-name">
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L20">
+											user4
+										</a>
+									</td>
+									<td>
+										<div class="attribute-signature">public User user4</div>
+									</td>
+
+									<td class="attribute-description"></td>
+								</tr>
+								<tr class="property">
+									<td class="attribute-name">
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L21">
+											user5
+										</a>
+									</td>
+									<td>
+										<div class="attribute-signature">public User user5</div>
+									</td>
+
+									<td class="attribute-description"></td>
+								</tr>
+								<tr class="property">
+									<td class="attribute-name">
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L22">
+											user6
+										</a>
+									</td>
+									<td>
+										<div class="attribute-signature">public User user6</div>
+									</td>
+
+									<td class="attribute-description"></td>
+								</tr>
+								<tr class="property">
+									<td class="attribute-name">
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L23">
+											user7
+										</a>
+									</td>
+									<td>
+										<div class="attribute-signature">public User user7</div>
+									</td>
+
+									<td class="attribute-description"></td>
+								</tr>
+								<tr class="property">
+									<td class="attribute-name">
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L24">
+											user8
+										</a>
+									</td>
+									<td>
+										<div class="attribute-signature">public User user8</div>
+									</td>
+
+									<td class="attribute-description"></td>
+								</tr>
+								<tr class="property">
+									<td class="attribute-name">
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L25">
+											user9
+										</a>
+									</td>
+									<td>
+										<div class="attribute-signature">public User user9</div>
+									</td>
+
+									<td class="attribute-description"></td>
+								</tr>
+								<tr class="property">
+									<td class="attribute-name">
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Go to source"
+											class="source-link"
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L15">
+											userIDs
+										</a>
+									</td>
+									<td>
+										<div class="attribute-signature">private Set&lt;Id&gt; userIDs</div>
+									</td>
+
+									<td class="attribute-description"></td>
 								</tr>
 							</table>
 						</div>
@@ -606,7 +673,7 @@
 											rel="noopener noreferrer"
 											title="Go to source"
 											class="source-link"
-											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L51">
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L56">
 											BingoController()
 										</a>
 									</h4>
@@ -624,23 +691,34 @@
 									<li class="method public">
 										<a class="methods-toc__entry" href="#BINGOController.getChooseRender">getChooseRender ()</a>
 
-										<div class="methods-toc__description">Take parameter and determine how to render the card</div>
+										<div class="methods-toc__description">
+											Take parameter and determine how to render the card
+											<br />
+											If parameter
+											<code class="code-inline">p</code>
+											has any value, will render as pdf.
+										</div>
 									</li>
 									<li class="method public">
 										<a class="methods-toc__entry" href="#BINGOController.newCard">newCard ()</a>
 
 										<div class="methods-toc__description">
-											Method NewCard navigates to the same Visualforce page, but flushes the cache and performs a GET. It does NOT place any &#39;p&#39; parameter in the URL, so
-											the new page renders as html. This effectively reshuffles the BINGO card.
+											Method newCard navigates to the same Visualforce page, but flushes the cache and performs a GET.
+											<br />
+											It does NOT place any &#39;p&#39; parameter in the URL, so the new page renders as html.
+											<br />
+											This effectively reshuffles the BINGO card.
 										</div>
 									</li>
 									<li class="method public">
 										<a class="methods-toc__entry" href="#BINGOController.showAsPDF">showAsPDF ()</a>
 
 										<div class="methods-toc__description">
-											Method showAsPDF navigates to the same Visualforce page, but flushes the cache and performs a GET. It also places the &#39;p&#39; parameter in the URL, so
-											ChooseRender returns &#39;pdf&#39; to the page RenderAs attribute. Note: This also reshuffles the BINGO card, so this does NOT merely display the current
-											BINGO card as a pdf.
+											Method showAsPDF navigates to the same Visualforce page, but flushes the cache and performs a GET.
+											<br />
+											It also places the &#39;p&#39; parameter in the URL, so ChooseRender returns &#39;pdf&#39; to the page RenderAs attribute.
+											<br />
+											Note: This also reshuffles the BINGO card, so this does NOT merely display the current BINGO card as a pdf.
 										</div>
 									</li>
 								</ul>
@@ -651,18 +729,24 @@
 											rel="noopener noreferrer"
 											title="Go to source"
 											class="source-link"
-											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L196">
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L200">
 											getChooseRender()
 										</a>
 									</h4>
-									<div class="method-description">Take parameter and determine how to render the card</div>
+									<div class="method-description">
+										Take parameter and determine how to render the card
+										<br />
+										If parameter
+										<code class="code-inline">p</code>
+										has any value, will render as pdf.
+									</div>
 									<div class="method-subtitle">Signature</div>
 
 									<div class="method-signature">public String getChooseRender()</div>
 									<div class="method-subtitle">Returns</div>
 									<div class="method-subtitle-description">
 										<code class="code-inline">String</code>
-										Render as pdf or on-screen
+										Render as pdf (pdf) or on-screen (null)
 									</div>
 								</div>
 								<div class="method public">
@@ -672,13 +756,16 @@
 											rel="noopener noreferrer"
 											title="Go to source"
 											class="source-link"
-											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L225">
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L229">
 											newCard()
 										</a>
 									</h4>
 									<div class="method-description">
-										Method NewCard navigates to the same Visualforce page, but flushes the cache and performs a GET. It does NOT place any &#39;p&#39; parameter in the URL, so the
-										new page renders as html. This effectively reshuffles the BINGO card.
+										Method newCard navigates to the same Visualforce page, but flushes the cache and performs a GET.
+										<br />
+										It does NOT place any &#39;p&#39; parameter in the URL, so the new page renders as html.
+										<br />
+										This effectively reshuffles the BINGO card.
 									</div>
 									<div class="method-subtitle">Signature</div>
 
@@ -696,14 +783,16 @@
 											rel="noopener noreferrer"
 											title="Go to source"
 											class="source-link"
-											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L211">
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BINGOController.cls#L215">
 											showAsPDF()
 										</a>
 									</h4>
 									<div class="method-description">
-										Method showAsPDF navigates to the same Visualforce page, but flushes the cache and performs a GET. It also places the &#39;p&#39; parameter in the URL, so
-										ChooseRender returns &#39;pdf&#39; to the page RenderAs attribute. Note: This also reshuffles the BINGO card, so this does NOT merely display the current BINGO
-										card as a pdf.
+										Method showAsPDF navigates to the same Visualforce page, but flushes the cache and performs a GET.
+										<br />
+										It also places the &#39;p&#39; parameter in the URL, so ChooseRender returns &#39;pdf&#39; to the page RenderAs attribute.
+										<br />
+										Note: This also reshuffles the BINGO card, so this does NOT merely display the current BINGO card as a pdf.
 									</div>
 									<div class="method-subtitle">Signature</div>
 
