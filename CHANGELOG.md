@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/dschach/ChatterBINGO/compare/ChatterBINGO-v1.0.0...ChatterBINGO-v1.1.0) (2023-08-20)
+
+
+### Features
+
+* Lightning Experience compatible! ([#72](https://github.com/dschach/ChatterBINGO/issues/72)) ([5fd3cd0](https://github.com/dschach/ChatterBINGO/commit/5fd3cd0c07752c6589df45b06eb179492347fbb1))
+
 ## [1.0.0](https://github.com/dschach/ChatterBINGO/compare/ChatterBINGO-v0.9.0...ChatterBINGO-v1.0.0) (2023-08-20)
 
 
