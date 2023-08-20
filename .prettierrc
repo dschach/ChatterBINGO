@@ -15,6 +15,12 @@
 		{
 			"files": "*.{cmp,page,component}",
 			"options": { "parser": "html" }
+		},
+		{
+			"files": "*.yml",
+			"options": { "parser": "yaml" }
 		}
-	]
+	],
+	"plugins": ["prettier-plugin-apex", "@prettier/plugin-xml"],
+	"$schema": "https://json.schemastore.org/prettierrc"
 }
