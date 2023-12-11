@@ -7,7 +7,7 @@
     }
   ],
   "name": "ChatterBINGO",
-  "namespace": "",
+  "namespace": "x2bingo",
   "sfdcLoginUrl": "https://login.salesforce.com",
   "sourceApiVersion": "58.0"
 }
