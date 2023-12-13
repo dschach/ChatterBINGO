@@ -3,11 +3,18 @@
     {
       "path": "force-app",
       "default": true,
-      "versionNumber": "1.1.0.NEXT"
+      "versionNumber": "1.1.0.NEXT",
+      "package": "ChatterBINGO",
+      "versionName": "ver 0.1",
+      "versionDescription": "Chatter BINGO app from Dreamforce 2010",
+      "releaseNotesUrl": "https://github.com/dschach/ChatterBINGO"
     }
   ],
   "name": "ChatterBINGO",
   "namespace": "x2bingo",
   "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "58.0"
+  "sourceApiVersion": "59.0",
+  "packageAliases": {
+    "ChatterBINGO": "0HoQm00000000cjKAA"
+  }
 }
