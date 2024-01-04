@@ -13,7 +13,7 @@ echo "Pushing metadata"
 sf project deploy start
 
 #echo "Assigning Permissions"
-sf org assign permset --name PermSetName
+sf org assign permset --name ChatterBINGO
 
 echo "Opening org"
 sf org open

@@ -1,21 +1,22 @@
 <apex:page controller="BINGOController" title="Dreamforce BINGO" showheader="true" sidebar="false" renderAs="{!chooserender}">
 	<apex:stylesheet value="{!URLFOR($Resource.ChatterBINGO, 'BingoCSS.css')}" />
+	<apex:stylesheet value="/resource/CustomBingoCSS.css" />
 
 	<center>
 		<apex:form rendered="{!$CurrentPage.parameters.p == null}">
-			<table border="0">
-				<tr>
-					<td width="200px">
-						<center><apex:commandLink value="{!$Label.New_BINGO_Card}" action="{!NewCard}" /></center>
+			<table border="0" class="tableclass">
+				<tr class="cardtrclass">
+					<td width="200px" class="cardtdclass">
+						<center><apex:commandLink value="{!$Label.New_BINGO_Card}" action="{!NewCard}" styleClass="toplinkclass" /></center>
 					</td>
 					<td width="200px">
-						<center><apex:commandLink value="{!$Label.Show_as_PDF}" action="{!showAsPDF}" target="_blank" /></center>
+						<center><apex:commandLink value="{!$Label.Show_as_PDF}" action="{!showAsPDF}" target="_blank" styleClass="toplinkclass" /></center>
 					</td>
 				</tr>
 			</table>
 		</apex:form>
 		<c:BingoCard>
-			<apex:image id="CollaborationCloud" url="{!URLFOR($Resource.ChatterBINGO, 'ChatterCloud.png')}" height="200" />
+			<apex:image id="CollaborationCloud" url="{!URLFOR($Resource.ChatterBINGO, 'ChatterCloud.png')}" height="200" styleClass="cloudclass" />
 		</c:BingoCard>
 	</center>
 </apex:page>

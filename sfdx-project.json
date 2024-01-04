@@ -5,7 +5,6 @@
       "default": true,
       "versionNumber": "1.1.0.NEXT",
       "package": "ChatterBINGO",
-      "versionName": "ver 0.1",
       "versionDescription": "Chatter BINGO app from Dreamforce 2010",
       "releaseNotesUrl": "https://github.com/dschach/ChatterBINGO"
     }
