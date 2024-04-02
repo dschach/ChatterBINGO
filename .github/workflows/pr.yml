@@ -6,7 +6,7 @@ on:
     types: [edited, opened, synchronize, reopened, review_requested]
     paths:
       - 'force-app/**'
-      - 'pmd/**'
+      - 'config/pmd/**'
       - '.github/workflows/pr.yml'
   workflow_dispatch:
 # Jobs to be executed
@@ -97,7 +97,7 @@ jobs:
         with:
           version: 'latest'
           sourcePath: 'force-app'
-          rulesets: 'pmd/ruleset.xml'
+          rulesets: 'config/pmd/ruleset.xml'
           analyzeModifiedFilesOnly: false
           createGitHubAnnotations: true
       # Check for PMD violations

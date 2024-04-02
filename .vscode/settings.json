@@ -7,7 +7,7 @@
   },
   "apexPMD.enableCache": true,
   "apexPMD.rulesets": [
-    "pmd/ruleset.xml"
+    "config/pmd/ruleset.xml"
   ],
   "apexPMD.runOnFileOpen": true,
   "apexPMD.runOnFileChange": true,

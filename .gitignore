@@ -44,5 +44,5 @@ $RECYCLE.BIN/
 
 # PMD
 .pmdCache
-pmd/pmd.csv
-pmd/deploy.csv
+config/pmd/pmd.csv
+config/pmd/deploy.csv
