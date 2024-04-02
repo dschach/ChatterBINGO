@@ -14,25 +14,25 @@
 		"apex:local:stop": "node node_modules/prettier-plugin-apex/dist/bin/stop-apex-server.js",
 		"apex:test:local": "rm testresults/* && sfdx force:apex:test:run -l RunLocalTests -d testresults -r human -c",
 		"orginit": ". scripts/orginit.sh",
-		"pmd:scan:csv": "$HOME/pmd/bin/run.sh pmd -d force-app -R pmd/ruleset.xml -f csv -r pmd/pmd.csv --cache .pmdCache --short-names --ignore-list .pmdignore",
-		"pmd:scan:deploy:csv": "$HOME/pmd/bin/run.sh pmd -d force-app -R pmd/deployRules.xml -f csv -r pmd/deploy.csv --cache .pmdCache --short-names --ignore-list src",
+		"pmd:scan:csv": "$HOME/pmd/bin/run.sh pmd -d force-app -R config/pmd/ruleset.xml -f csv -r config/pmd/pmd.csv --cache .pmdCache --short-names --ignore-list .pmdignore",
+		"pmd:scan:deploy:csv": "$HOME/pmd/bin/run.sh pmd -d force-app -R config/pmd/deployRules.xml -f csv -r config/pmd/deploy.csv --cache .pmdCache --short-names --ignore-list src",
 		"prettier:apex:local": "prettier --apex-standalone-parser built-in --write \"force-app/**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,yaml,yml}\" --ignore-list .pmdignore",
 		"prettier:docs": "prettier --write \"docs/*.html\"",
 		"prettier:verify:apex:local": "prettier --apex-standalone-parser built-in --list-different \"force-app/**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,yaml,yml}\" --ignore-list .pmdignore",
 		"prettier": "prettier --write \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
 		"prettier:verify": "prettier --list-different \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
-		"postinstall": "husky install",
+		"prepare": "husky",
 		"precommit": "lint-staged",
 		"prune": "git branch | grep -v \"main\" | xargs git branch -D",
 		"updatehighlight": ". doc-assets/updateHighlight.sh"
 	},
 	"devDependencies": {
-		"@prettier/plugin-xml": "^3.2.2",
-		"husky": "^8.0.3",
-		"lint-staged": "^15.2.0",
-		"marked": "^11.1.0",
-		"prettier": "^3.1.1",
-		"prettier-plugin-apex": "^2.0.1"
+		"@prettier/plugin-xml": "^3.4.1",
+		"husky": "^9.0.11",
+		"lint-staged": "^15.2.2",
+		"marked": "^12.0.1",
+		"prettier": "^3.2.5",
+		"prettier-plugin-apex": "^2.1.0"
 	},
 	"lint-staged": {
 		"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}": [

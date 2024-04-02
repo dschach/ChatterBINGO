@@ -6,7 +6,7 @@ on:
     types: [edited, opened, synchronize, reopened, review_requested]
     paths:
       - 'force-app/**'
-      - 'pmd/**'
+      - 'config/pmd/**'
       - '.github/workflows/pr.yml'
   workflow_dispatch:
 # Jobs to be executed
@@ -92,12 +92,12 @@ jobs:
           java-version: '11'
       # Run PMD scan
       - name: 'Perform PMD scan with PMD action'
-        uses: pmd/pmd-github-action@v1
+        uses: config/pmd/pmd-github-action@v1
         id: pmd-action
         with:
           version: 'latest'
           sourcePath: 'force-app'
-          rulesets: 'pmd/ruleset.xml'
+          rulesets: 'config/pmd/ruleset.xml'
           analyzeModifiedFilesOnly: false
           createGitHubAnnotations: true
       # Check for PMD violations

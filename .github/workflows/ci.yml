@@ -14,7 +14,7 @@ on:
     #   - '.github/**'
     paths:
       - 'force-app/**'
-      - 'pmd/**'
+      - 'config/pmd/**'
       - 'config/**'
       - '.github/workflows/**'
       - 'package.json'
@@ -68,4 +68,4 @@ jobs:
 
       # Run PMD scan
       - name: 'Run PMD scan'
-        run: ~/pmd/bin/pmd check --dir force-app --rulesets pmd/ruleset.xml --format text --cache .pmdCacje --minimum-priority "Medium Low"
+        run: ~/pmd/bin/pmd check --dir force-app --rulesets config/pmd/ruleset.xml --format text --cache .pmdCacje --minimum-priority "Medium Low"
