@@ -43,11 +43,6 @@ jobs:
       - name: 'Authenticate Dev Hub'
         run: sf org login sfdx-url --sfdx-url-file ./DEVHUB_SFDX_URL.txt --alias devhub --set-default-dev-hub
 
-      # Add namespace to project config
-      - name: Add namespace to project config
-        run: |
-          sed -i 's,"namespace": "","namespace": "",' sfdx-project.json
-
       # Create scratch org
       - name: 'Create scratch org'
         run: sf org create scratch --definition-file config/project-scratch-def.json --alias ChatterBINGO --set-default --no-ancestors --duration-days 1 --wait 20 --target-dev-hub devhub
@@ -71,11 +66,6 @@ jobs:
       - name: 'Delete scratch org'
         if: always()
         run: sf org delete scratch --no-prompt --target-org ChatterBINGO
-
-      # Remove namespace from project config
-      - name: Remove namespace from project config
-        run: |
-          sed -i 's,"namespace": "","namespace": "",' sfdx-project.json
 
   scan-pmd-action:
     runs-on: ubuntu-latest
