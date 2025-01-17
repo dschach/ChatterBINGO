@@ -38,10 +38,10 @@
 						</summary>
 						<ul>
 							<!-- menu items -->
-							<li title="BINGOController" id="item-BINGOController" class="nav-item class" onclick="goToLocation('BINGOController.html');">
+							<li title="BINGOController" id="item-BINGOController" class="nav-item class global" onclick="goToLocation('BINGOController.html');">
 								<a tabindex="1" href="javascript:void(0)">BINGOController</a>
 							</li>
-							<li title="BingoControllerTest" id="item-BingoControllerTest" class="nav-item class" onclick="goToLocation('BingoControllerTest.html');">
+							<li title="BingoControllerTest" id="item-BingoControllerTest" class="nav-item class private" onclick="goToLocation('BingoControllerTest.html');">
 								<a tabindex="1" href="javascript:void(0)">BingoControllerTest</a>
 							</li>
 						</ul>
@@ -62,14 +62,8 @@
 					<input type="checkbox" checked="true" id="cbx-public" onclick="toggleScope('public', this.checked);" />
 					<label for="cbx-public">public</label>
 					&nbsp;&nbsp;
-					<input type="checkbox" checked="true" id="cbx-protected" onclick="toggleScope('protected', this.checked);" />
-					<label for="cbx-protected">protected</label>
-					&nbsp;&nbsp;
 					<input type="checkbox" checked="true" id="cbx-private" onclick="toggleScope('private', this.checked);" />
 					<label for="cbx-private">private</label>
-					&nbsp;&nbsp;
-					<input type="checkbox" checked="true" id="cbx-webservice" onclick="toggleScope('webservice', this.checked);" />
-					<label for="cbx-webservice">webService</label>
 					&nbsp;&nbsp;
 					<input type="checkbox" checked="true" id="cbx-testmethod" onclick="toggleScope('testmethod', this.checked);" />
 					<label for="cbx-testmethod">testMethod</label>
@@ -84,7 +78,7 @@
 								rel="noopener noreferrer"
 								title="Go to source"
 								class="source-link"
-								href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BingoControllerTest.cls#L11">
+								href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BingoControllerTest.cls#L13">
 								BingoControllerTest
 							</a>
 						</h2>
@@ -97,7 +91,9 @@
 							<div class="class-subtitle-description">Chris Shackelford, David Schach, Brad Gross</div>
 							<div class="class-subtitle">Since</div>
 							<div class="class-subtitle-description">
-								<li>2.1 2011-02-18</li>
+								<li>2011-02-18 v1.1 Dreamforce 2011 Release</li>
+								<li>2023-08 v2.0</li>
+								<li>2024-01 v2.1</li>
 							</div>
 						</div>
 						<div class="subsection properties BingoControllerTest">
@@ -107,14 +103,14 @@
 									<th>Name</th>
 									<th>Signature</th>
 								</tr>
-								<tr class="property">
+								<tr class="property public">
 									<td class="attribute-name">
 										<a
 											target="_blank"
 											rel="noopener noreferrer"
 											title="Go to source"
 											class="source-link"
-											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BingoControllerTest.cls#L126">
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BingoControllerTest.cls#L128">
 											theProfile
 										</a>
 									</td>
@@ -133,12 +129,18 @@
 
 										<div class="methods-toc__description">
 											Random words are required for testing as you will likely run into any word I can insert during a test class and produce false test results.
+											<br />
+											Aadapted from ActionPlans, written by Matias Menafra
 										</div>
 									</li>
 									<li class="method public">
 										<a class="methods-toc__entry" href="#BingoControllerTest.createTestUser">createTestUser (p)</a>
 
-										<div class="methods-toc__description">Creates a new User</div>
+										<div class="methods-toc__description">
+											Creates a new User
+											<br />
+											Aadapted from ActionPlans, written by Matias Menafra
+										</div>
 									</li>
 									<li class="method public">
 										<a class="methods-toc__entry" href="#BingoControllerTest.getSuperProfile">getSuperProfile ()</a>
@@ -149,16 +151,20 @@
 										<a class="methods-toc__entry" href="#BingoControllerTest.testBINGO0">testBINGO0 ()</a>
 
 										<div class="methods-toc__description">
-											TestMethod - inserts 0 users, has them each follow the running User, and renders the BINGO card. This method also verifies that the card is first shown as a
-											html page, not a pdf.
+											TestMethod - inserts 0 users, has them each follow the running User, and renders the BINGO card.
+											<br />
+											This method also verifies that the card is first shown as a html page, not a pdf.
 										</div>
 									</li>
 									<li class="method testmethod">
 										<a class="methods-toc__entry" href="#BingoControllerTest.testBINGO2">testBINGO2 ()</a>
 
 										<div class="methods-toc__description">
-											TestMethod - inserts 2 users, has them each follow the running User, and renders the BINGO card. It also has the running User follow each of the 2 inserted
-											users. This is because the BINGO card draws from a User&#39;s followers and from those users who follow the User.
+											TestMethod - inserts 2 users, has them each follow the running User, and renders the BINGO card.
+											<br />
+											It also has the running User follow each of the 2 inserted users.
+											<br />
+											This is because the BINGO card draws from a User&#39;s followers and from those users who follow the User.
 										</div>
 									</li>
 									<li class="method testmethod">
@@ -179,12 +185,14 @@
 											rel="noopener noreferrer"
 											title="Go to source"
 											class="source-link"
-											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BingoControllerTest.cls#L178">
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BingoControllerTest.cls#L181">
 											createRandomWord()
 										</a>
 									</h4>
 									<div class="method-description">
 										Random words are required for testing as you will likely run into any word I can insert during a test class and produce false test results.
+										<br />
+										Aadapted from ActionPlans, written by Matias Menafra
 									</div>
 									<div class="method-subtitle">Signature</div>
 
@@ -202,11 +210,15 @@
 											rel="noopener noreferrer"
 											title="Go to source"
 											class="source-link"
-											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BingoControllerTest.cls#L153">
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BingoControllerTest.cls#L155">
 											createTestUser(p)
 										</a>
 									</h4>
-									<div class="method-description">Creates a new User</div>
+									<div class="method-description">
+										Creates a new User
+										<br />
+										Aadapted from ActionPlans, written by Matias Menafra
+									</div>
 									<div class="method-subtitle">Signature</div>
 
 									<div class="method-signature">public static User createTestUser(Profile p)</div>
@@ -232,7 +244,7 @@
 											rel="noopener noreferrer"
 											title="Go to source"
 											class="source-link"
-											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BingoControllerTest.cls#L132">
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BingoControllerTest.cls#L134">
 											getSuperProfile()
 										</a>
 									</h4>
@@ -241,7 +253,10 @@
 
 									<div class="method-signature">public static Profile getSuperProfile()</div>
 									<div class="method-subtitle">Returns</div>
-									<div class="method-subtitle-description">Profile</div>
+									<div class="method-subtitle-description">
+										<code class="code-inline">Profile</code>
+										A profile with ModifyAllData
+									</div>
 								</div>
 								<div class="method testmethod">
 									<h4 class="method-title" id="BingoControllerTest.testBINGO0">
@@ -250,13 +265,14 @@
 											rel="noopener noreferrer"
 											title="Go to source"
 											class="source-link"
-											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BingoControllerTest.cls#L98">
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BingoControllerTest.cls#L100">
 											testBINGO0()
 										</a>
 									</h4>
 									<div class="method-description">
-										TestMethod - inserts 0 users, has them each follow the running User, and renders the BINGO card. This method also verifies that the card is first shown as a
-										html page, not a pdf.
+										TestMethod - inserts 0 users, has them each follow the running User, and renders the BINGO card.
+										<br />
+										This method also verifies that the card is first shown as a html page, not a pdf.
 									</div>
 									<div class="method-subtitle">Signature</div>
 									<div class="method-annotations">@isTest</div>
@@ -271,13 +287,16 @@
 											rel="noopener noreferrer"
 											title="Go to source"
 											class="source-link"
-											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BingoControllerTest.cls#L54">
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BingoControllerTest.cls#L56">
 											testBINGO2()
 										</a>
 									</h4>
 									<div class="method-description">
-										TestMethod - inserts 2 users, has them each follow the running User, and renders the BINGO card. It also has the running User follow each of the 2 inserted
-										users. This is because the BINGO card draws from a User&#39;s followers and from those users who follow the User.
+										TestMethod - inserts 2 users, has them each follow the running User, and renders the BINGO card.
+										<br />
+										It also has the running User follow each of the 2 inserted users.
+										<br />
+										This is because the BINGO card draws from a User&#39;s followers and from those users who follow the User.
 									</div>
 									<div class="method-subtitle">Signature</div>
 									<div class="method-annotations">@isTest</div>
@@ -290,7 +309,7 @@
 											rel="noopener noreferrer"
 											title="Go to source"
 											class="source-link"
-											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BingoControllerTest.cls#L16">
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BingoControllerTest.cls#L18">
 											testBINGO30()
 										</a>
 									</h4>
@@ -306,7 +325,7 @@
 											rel="noopener noreferrer"
 											title="Go to source"
 											class="source-link"
-											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BingoControllerTest.cls#L117">
+											href="https://github.com/dschach/ChatterBINGO/tree/main/force-app/main/default/classes/BingoControllerTest.cls#L119">
 											testShowAsPDF()
 										</a>
 									</h4>

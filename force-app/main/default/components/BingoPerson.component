@@ -1,9 +1,11 @@
 <apex:component access="global">
 	<apex:attribute name="User" type="User" required="false" description="user" />
 	<center>
-		<apex:image id="UserImage" url="{!User.SmallPhotoUrl}" width="64px" height="64px" rendered="{!User != null}" />
-		<apex:image id="BlankImage" url="{!URLFOR($Resource.ChatterBINGO, 'BlankUser.png')}" width="64px" height="64px" rendered="{!User == null}" />
+		<apex:image id="UserImage" url="{!User.SmallPhotoUrl}" width="64px" height="64px" rendered="{!User != null}" alt="{!User.name}" />
+		<apex:image id="BlankImage" url="{!URLFOR($Resource.ChatterBINGO, 'BlankUser.png')}" width="64px" height="64px" rendered="{!User == null}" alt="{!User.name}" />
 		<br />
-		<b><apex:outputtext value="{!User.Name}" /></b>
+		<b>
+			<apex:outputtext value="{!User.Name}" />
+		</b>
 	</center>
 </apex:component>

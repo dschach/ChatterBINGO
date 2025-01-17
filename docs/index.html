@@ -38,10 +38,10 @@
 						</summary>
 						<ul>
 							<!-- menu items -->
-							<li title="BINGOController" id="item-BINGOController" class="nav-item class" onclick="goToLocation('BINGOController.html');">
+							<li title="BINGOController" id="item-BINGOController" class="nav-item class global" onclick="goToLocation('BINGOController.html');">
 								<a tabindex="1" href="javascript:void(0)">BINGOController</a>
 							</li>
-							<li title="BingoControllerTest" id="item-BingoControllerTest" class="nav-item class" onclick="goToLocation('BingoControllerTest.html');">
+							<li title="BingoControllerTest" id="item-BingoControllerTest" class="nav-item class private" onclick="goToLocation('BingoControllerTest.html');">
 								<a tabindex="1" href="javascript:void(0)">BingoControllerTest</a>
 							</li>
 						</ul>
@@ -62,14 +62,8 @@
 					<input type="checkbox" checked="true" id="cbx-public" onclick="toggleScope('public', this.checked);" />
 					<label for="cbx-public">public</label>
 					&nbsp;&nbsp;
-					<input type="checkbox" checked="true" id="cbx-protected" onclick="toggleScope('protected', this.checked);" />
-					<label for="cbx-protected">protected</label>
-					&nbsp;&nbsp;
 					<input type="checkbox" checked="true" id="cbx-private" onclick="toggleScope('private', this.checked);" />
 					<label for="cbx-private">private</label>
-					&nbsp;&nbsp;
-					<input type="checkbox" checked="true" id="cbx-webservice" onclick="toggleScope('webservice', this.checked);" />
-					<label for="cbx-webservice">webService</label>
 					&nbsp;&nbsp;
 					<input type="checkbox" checked="true" id="cbx-testmethod" onclick="toggleScope('testmethod', this.checked);" />
 					<label for="cbx-testmethod">testMethod</label>

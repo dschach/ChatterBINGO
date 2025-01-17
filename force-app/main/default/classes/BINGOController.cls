@@ -4,8 +4,9 @@
  * @author Chris Shackelford
  * @author David Schach
  * @author Brad Gross
- * @since 2011-02-18 First revision
- * @since 2023-08 v1.1
+ * @since 2011-02-18 v1.1 Dreamforce 2011 Release
+ * @since 2023-08 v2.0
+ * @since 2024-01 v2.1
  * @group BINGO
  */
 global with sharing class BINGOController {
@@ -51,7 +52,7 @@ global with sharing class BINGOController {
 	private static final Integer QUERY_LIMIT = 999;
 
 	/**
-	 *  The constructor for BingoController
+	 * The constructor for BingoController
 	 */
 	public BingoController() {
 		myId = UserInfo.getUserId();
@@ -195,7 +196,7 @@ global with sharing class BINGOController {
 	 * Take parameter and determine how to render the card
 	 * <br>If parameter `p` has any value, will render as pdf.
 	 *
-	 * @return  `String` Render as pdf (pdf) or on-screen (null)
+	 * @return `String` Render as pdf (pdf) or on-screen (null)
 	 */
 	public String getChooseRender() {
 		if (ApexPages.currentPage().getParameters().get('p') != null) {
@@ -210,7 +211,7 @@ global with sharing class BINGOController {
 	 * <br>It also places the 'p' parameter in the URL, so ChooseRender returns 'pdf' to the page RenderAs attribute.
 	 * <br>Note: This also reshuffles the BINGO card, so this does NOT merely display the current BINGO card as a pdf.
 	 *
-	 * @return  `PageReference` New Page, as PDF
+	 * @return `PageReference` New Page, as PDF
 	 */
 	public PageReference showAsPDF() {
 		PageReference pdfPage = ApexPages.currentPage();

@@ -13,9 +13,9 @@ engine:
   scope:
     - global
     - public
-    - protected
+    #- protected
     - private
-    - webService
+    #- webService
     - testMethod
   homePagePath: '${workspaceFolder}/doc-assets/main.html'
   #pages:

@@ -4,12 +4,6 @@
 	"version": "1.1.0",
 	"description": "Chatter BINGO app from Dreamforce 2010",
 	"scripts": {
-		"lint": "eslint **/{aura,lwc}/**",
-		"test": "npm run test:unit",
-		"test:unit": "sfdx-lwc-jest",
-		"test:unit:watch": "sfdx-lwc-jest --watch",
-		"test:unit:debug": "sfdx-lwc-jest --debug",
-		"test:unit:coverage": "sfdx-lwc-jest --coverage",
 		"apex:local:start": "node node_modules/prettier-plugin-apex/dist/bin/start-apex-server.js",
 		"apex:local:stop": "node node_modules/prettier-plugin-apex/dist/bin/stop-apex-server.js",
 		"apex:test:local": "rm testresults/* && sfdx force:apex:test:run -l RunLocalTests -d testresults -r human -c",

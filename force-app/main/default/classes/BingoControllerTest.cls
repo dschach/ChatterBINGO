@@ -4,7 +4,9 @@
  * @author Chris Shackelford
  * @author David Schach
  * @author Brad Gross
- * @since 2.1 2011-02-18
+ * @since 2011-02-18 v1.1 Dreamforce 2011 Release
+ * @since 2023-08 v2.0
+ * @since 2024-01 v2.1
  * @group BINGO
  */
 @isTest
@@ -46,8 +48,8 @@ private class BingoControllerTest {
 	/**
 	 * TestMethod - inserts 2 users, has them each follow the running User,
 	 * and renders the BINGO card.
-	 * It also has the running User follow each of the 2 inserted users.
-	 * This is because the BINGO card draws from a User's followers and
+	 * <br>It also has the running User follow each of the 2 inserted users.
+	 * <br>This is because the BINGO card draws from a User's followers and
 	 * from those users who follow the User.
 	 */
 	@isTest
@@ -91,7 +93,7 @@ private class BingoControllerTest {
 
 	/**
 	 * TestMethod - inserts 0 users, has them each follow the running User, and renders the BINGO card.
-	 * This method also verifies that the card is first shown as a html page, not a pdf.
+	 * <br>This method also verifies that the card is first shown as a html page, not a pdf.
 	 * @author David Schach
 	 */
 	@isTest
@@ -126,8 +128,8 @@ private class BingoControllerTest {
 	public static Profile theProfile;
 
 	/**
-	 *  Helper method to find a ModifyAllData User profile for each of the test users we create.
-	 * @return Profile
+	 * Helper method to find a ModifyAllData User profile for each of the test users we create.
+	 * @return `Profile` A profile with ModifyAllData
 	 */
 	public static Profile getSuperProfile() {
 		if (theProfile == null) {
@@ -138,7 +140,6 @@ private class BingoControllerTest {
 				}
 			}
 		}
-
 		return theProfile;
 	}
 
@@ -146,6 +147,7 @@ private class BingoControllerTest {
 
 	/**
 	 * Creates a new User
+	 * <br>Aadapted from ActionPlans, written by Matias Menafra
 	 * @author David Schach
 	 * @param  p User Profile
 	 * @return `User` Created User testUser
@@ -173,6 +175,7 @@ private class BingoControllerTest {
 	}
 	/**
 	 * Random words are required for testing as you will likely run into any word I can insert during a test class and produce false test results.
+	 * <br>Aadapted from ActionPlans, written by Matias Menafra
 	 * @return `String` random word
 	 */
 	public static String createRandomWord() {
