@@ -1,7 +1,7 @@
 {
 	"name": "chatter-bingo",
 	"private": true,
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"description": "Chatter BINGO app from Dreamforce 2010",
 	"scripts": {
 		"lint": "eslint **/{aura,lwc}/**",
